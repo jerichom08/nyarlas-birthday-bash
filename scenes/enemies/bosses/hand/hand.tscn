@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://fjddv0psp5vr" path="res://assets/sounds temp/enemy sounds/bosses/hand/hand_telegraph.wav" id="11_yc1la"]
 [ext_resource type="AudioStream" uid="uid://d2w2owh2loops" path="res://assets/sounds temp/enemy sounds/bosses/hand/hand_attack.wav" id="12_v2mx8"]
 [ext_resource type="AudioStream" uid="uid://diwi7nltpecm8" path="res://assets/sounds temp/enemy sounds/bosses/boss_defeat.wav" id="15_xwnrt"]
+[ext_resource type="AudioStream" uid="uid://cuu14t5hae55i" path="res://assets/sounds temp/temp/hurt.wav" id="16_ff2jo"]
 
 [sub_resource type="Resource" id="Resource_0ofnw"]
 script = ExtResource("2_joeo2")
@@ -188,3 +189,6 @@ stream = ExtResource("12_v2mx8")
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=236050027]
 stream = ExtResource("15_xwnrt")
+
+[node name="HandHurt" type="AudioStreamPlayer2D" parent="." unique_id=1228576789]
+stream = ExtResource("16_ff2jo")
