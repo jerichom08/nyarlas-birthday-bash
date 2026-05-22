@@ -11,13 +11,13 @@ extends EnemyBase
 @onready var defeat_sfx: AudioStreamPlayer2D = $Defeat
 @onready var hit_sfx: AudioStreamPlayer2D = $Hit
 
-
 signal boss_defeated
 
 const WORLD_SCALE := 3.0
 var can_take_damage: bool = true
 
 func _ready() -> void:
+	AudioPlayer._play_music_boss()
 	super._ready()
 	scale *= WORLD_SCALE
 	
@@ -132,6 +132,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			can_attack = true
 		State.DEFEAT:
 			boss_defeated.emit()
+			AudioPlayer._play_music_level()
 			fade_out_and_free()
 
 func _on_animated_sprite_2d_frame_changed() -> void:

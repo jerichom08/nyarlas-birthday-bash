@@ -21,7 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://1t6dlm8olyru" path="res://assets/sounds temp/enemy sounds/bosses/frog/snore.wav" id="19_1kjsf"]
 [ext_resource type="AudioStream" uid="uid://bnikjm4u6bn1w" path="res://assets/sounds temp/enemy sounds/bosses/frog/ribbit.wav" id="20_3do7h"]
 [ext_resource type="AudioStream" uid="uid://opbo08k2f2ug" path="res://assets/sounds temp/enemy sounds/bosses/frog/slime.wav" id="21_3do7h"]
-[ext_resource type="AudioStream" uid="uid://ciede2404git1" path="res://assets/sounds temp/enemy sounds/bosses/frog/hit.wav" id="22_iskih"]
+[ext_resource type="AudioStream" uid="uid://cuu14t5hae55i" path="res://assets/sounds temp/temp/hurt.wav" id="22_5qjih"]
 [ext_resource type="AudioStream" uid="uid://7rxffg4wqy0a" path="res://assets/sounds temp/enemy sounds/bosses/frog/heal.wav" id="23_2hc16"]
 [ext_resource type="AudioStream" uid="uid://diwi7nltpecm8" path="res://assets/sounds temp/enemy sounds/bosses/boss_defeat.wav" id="24_5qjih"]
 
@@ -588,7 +588,7 @@ stream = ExtResource("20_3do7h")
 stream = ExtResource("21_3do7h")
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1290783722]
-stream = ExtResource("22_iskih")
+stream = ExtResource("22_5qjih")
 pitch_scale = 3.62
 
 [node name="HealSound" type="AudioStreamPlayer2D" parent="." unique_id=1467425475]
