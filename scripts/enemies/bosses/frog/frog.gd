@@ -38,7 +38,7 @@ func set_state(new_state: State) -> void:
 
 	match new_state:
 		State.HIT:
-			hit_sfx.play(1.1)
+			hit_sfx.play()
 
 	if new_state == State.ATTACK:
 		attack_executed = false
@@ -48,6 +48,7 @@ func set_state(new_state: State) -> void:
 	play_animation()
 
 func _ready() -> void:
+	AudioPlayer._play_music_boss()
 	super._ready()
 	set_state(State.REST)
 	snore_sfx.play(1)
@@ -233,6 +234,7 @@ func _on_animation_finished() -> void:
 			if defeat_count > 2:
 				#await get_tree().create_timer(5.0).timeout
 				#queue_free()
+				AudioPlayer._play_music_level()
 				boss_defeated.emit()
 				fade_out_and_free()
 

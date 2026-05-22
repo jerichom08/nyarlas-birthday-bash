@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://ciiybqs6dym04" path="res://assets/sounds temp/enemy sounds/bosses/minotaur/minotaur_heavy_attack_sfx.wav" id="13_3ahq4"]
 [ext_resource type="AudioStream" uid="uid://blnx1vs3rbpbt" path="res://assets/sounds temp/enemy sounds/bosses/minotaur/minotaur_light_attack_sfx.wav" id="14_3u2jj"]
 [ext_resource type="AudioStream" uid="uid://diwi7nltpecm8" path="res://assets/sounds temp/enemy sounds/bosses/boss_defeat.wav" id="16_f6s53"]
-[ext_resource type="AudioStream" uid="uid://d10c3i0hg2grq" path="res://assets/sounds temp/enemy sounds/hit_sound.wav" id="17_qr0nc"]
+[ext_resource type="AudioStream" uid="uid://cuu14t5hae55i" path="res://assets/sounds temp/temp/hurt.wav" id="17_qr0nc"]
 
 [sub_resource type="Resource" id="Resource_3ahq4"]
 script = ExtResource("4_ytddw")

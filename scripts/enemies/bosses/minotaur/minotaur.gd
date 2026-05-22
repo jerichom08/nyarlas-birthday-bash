@@ -29,6 +29,7 @@ var attack_executed: bool = false
 const WORLD_SCALE: float = 3.0
 
 func _ready() -> void:
+	AudioPlayer._play_music_boss()
 	scale *= WORLD_SCALE
 	super._ready()
 	landing_position = landing_marker.global_position
@@ -87,6 +88,7 @@ func take_damage(_damage: int, _knockback: Vector2 = Vector2.ZERO) -> void:
 
 	if health <= 0:
 		boss_defeated.emit()
+		AudioPlayer._play_music_level()
 		defeat_sfx.play()
 		set_state(State.DEFEAT)
 	else:

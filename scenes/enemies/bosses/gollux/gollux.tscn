@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://bdex8w352e0k1" path="res://scripts/enemies/components/hurtbox.gd" id="12_t4lv2"]
 [ext_resource type="AudioStream" uid="uid://cx5aswkv5sa40" path="res://assets/sounds temp/enemy sounds/bosses/gollux/gollux_light_attack.wav" id="14_v1gtx"]
 [ext_resource type="AudioStream" uid="uid://diwi7nltpecm8" path="res://assets/sounds temp/enemy sounds/bosses/boss_defeat.wav" id="19_q61tx"]
-[ext_resource type="AudioStream" uid="uid://d10c3i0hg2grq" path="res://assets/sounds temp/enemy sounds/hit_sound.wav" id="20_ofdad"]
+[ext_resource type="AudioStream" uid="uid://cuu14t5hae55i" path="res://assets/sounds temp/temp/hurt.wav" id="21_xigbe"]
 
 [sub_resource type="Resource" id="Resource_v1gtx"]
 script = ExtResource("2_t4lv2")
@@ -703,7 +703,7 @@ pitch_scale = 0.5
 stream = ExtResource("19_q61tx")
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=71275028]
-stream = ExtResource("20_ofdad")
+stream = ExtResource("21_xigbe")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
