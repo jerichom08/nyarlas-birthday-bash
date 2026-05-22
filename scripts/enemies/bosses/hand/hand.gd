@@ -23,6 +23,7 @@ extends EnemyBase
 @onready var telegraph_sfx = $HandTelegraph
 @onready var attack_sfx = $HandAttack
 @onready var idle_sfx = $HandIdle
+@onready var hurt_sfx: AudioStreamPlayer2D = $HandHurt
 
 var can_take_damage := true
 const WORLD_SCALE := 3.0
@@ -32,6 +33,7 @@ signal boss_defeated
 
 func _ready() -> void:
 	super._ready()
+	AudioPlayer._play_music_boss()
 
 	scale *= WORLD_SCALE
 
@@ -180,6 +182,9 @@ func hit(damage: int) -> void:
 	if telegraph_sfx.playing:
 		telegraph_sfx.stop()
 
+	if not hurt_sfx.playing:
+		hurt_sfx.play()
+
 	set_state(State.HIT)
 
 	velocity.x = 0
@@ -190,7 +195,6 @@ func hit(damage: int) -> void:
 		defeat_sfx.play()
 		defeat()
 		return
-
 
 func defeat() -> void:
 	set_state(State.DEFEAT)
@@ -208,6 +212,7 @@ func defeat() -> void:
 
 	#set_collisions_enabled(false)
 	boss_defeated.emit()
+	AudioPlayer._play_music_level()
 	fade_out_and_free()
 
 func take_damage(damage: int, _knockback: Vector2 = Vector2.ZERO) -> void:
