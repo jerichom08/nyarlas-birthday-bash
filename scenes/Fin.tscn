@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dq6i2a1c6n38w" path="res://scenes/lvInterface/SceneTransition.tscn" id="4_3knc2"]
 [ext_resource type="AudioStream" uid="uid://bmn1n3rrobhnv" path="res://assets/sounds temp/level sounds/click.mp3" id="5_lihvx"]
 [ext_resource type="AudioStream" uid="uid://cy5y7k5nnbj1k" path="res://assets/sounds temp/level sounds/fin.wav" id="5_rgqr6"]
+[ext_resource type="Texture2D" uid="uid://cnj6ykhwyupj7" path="res://assets/images/bedroom/Joan.png" id="7_5gu5v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibarm"]
 texture = ExtResource("2_4acgi")
@@ -42,6 +43,56 @@ corner_radius_bottom_left = 25
 Button/styles/hover = SubResource("StyleBoxFlat_wu84c")
 Button/styles/normal = SubResource("StyleBoxFlat_8ln24")
 Button/styles/pressed = SubResource("StyleBoxFlat_bqqt6")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1ysx"]
+atlas = ExtResource("7_5gu5v")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byuw4"]
+atlas = ExtResource("7_5gu5v")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogghk"]
+atlas = ExtResource("7_5gu5v")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgffh"]
+atlas = ExtResource("7_5gu5v")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grxxe"]
+atlas = ExtResource("7_5gu5v")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rg8tp"]
+atlas = ExtResource("7_5gu5v")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4acgi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1ysx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byuw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogghk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgffh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grxxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rg8tp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="LevelSelect" type="Node2D" unique_id=340735494]
 script = ExtResource("1_5gu5v")
@@ -127,6 +178,11 @@ stream = ExtResource("5_lihvx")
 
 [node name="fin" type="AudioStreamPlayer2D" parent="." unique_id=1097958621]
 stream = ExtResource("5_rgqr6")
+
+[node name="Joan" type="AnimatedSprite2D" parent="." unique_id=1800784171]
+position = Vector2(-566, 332)
+scale = Vector2(8.09375, 8.09375)
+sprite_frames = SubResource("SpriteFrames_4acgi")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Button Manager/return" to="." method="_on_return_pressed"]
