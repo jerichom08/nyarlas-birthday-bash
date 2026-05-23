@@ -23,11 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://bwilndgwo5sff" path="res://scenes/puzzles/puzzle_5/TestItem.tscn" id="26_8ifkk"]
 [ext_resource type="Texture2D" uid="uid://c1il4ccq4sqwo" path="res://assets/images/food/cookie_9.png" id="26_hxxlo"]
 [ext_resource type="Texture2D" uid="uid://cahawb4ghtdk7" path="res://assets/images/food/cookie_3.png" id="26_qe53u"]
-[ext_resource type="Texture2D" uid="uid://dxghq3d66amnl" path="res://assets/images/food/cookie_1.png" id="28_44q8j"]
+[ext_resource type="Texture2D" uid="uid://bm064av7x8nut" path="res://assets/images/food/cookie_1.png" id="28_44q8j"]
 [ext_resource type="AudioStream" uid="uid://cqa6uhfvm72v2" path="res://assets/sounds temp/status sounds/Retro PowerUP 09.wav" id="28_hxxlo"]
 [ext_resource type="AudioStream" uid="uid://dcaflvwu7jsxg" path="res://assets/sounds temp/status sounds/Retro PowerUP 23.wav" id="29_qe53u"]
 [ext_resource type="PackedScene" uid="uid://dlckg22mobjbq" path="res://scenes/mobs/turnipNPC.tscn" id="29_wa3js"]
-[ext_resource type="Texture2D" uid="uid://s1g1wtgvb12x" path="res://scripts/UI/turnipFace.png" id="30_44q8j"]
+[ext_resource type="Texture2D" uid="uid://csx60yopamsgf" path="res://scripts/UI/turnipFace.png" id="30_44q8j"]
 [ext_resource type="AudioStream" uid="uid://e5xbfukr8s28" path="res://assets/sounds temp/status sounds/Retro PowerUP StereoUP 05.wav" id="30_wa3js"]
 [ext_resource type="PackedScene" uid="uid://cwtwx8kf8338r" path="res://scripts/UI/rpg_style_talk.tscn" id="31_qe53u"]
 [ext_resource type="PackedScene" uid="uid://bgnvfv570pkfx" path="res://scenes/lvInterface/outofbound.tscn" id="32_44q8j"]
@@ -868,14 +868,17 @@ position = Vector2(-12, -353)
 [node name="AudioCorrect" type="AudioStreamPlayer2D" parent="." unique_id=110728247]
 position = Vector2(-105, -10)
 stream = ExtResource("28_hxxlo")
+bus = &"SFX"
 
 [node name="AudioWrong" type="AudioStreamPlayer2D" parent="." unique_id=541049264]
 position = Vector2(-75, -11)
 stream = ExtResource("29_qe53u")
+bus = &"SFX"
 
 [node name="AudioComplete" type="AudioStreamPlayer2D" parent="." unique_id=508717965]
 position = Vector2(-146, -62)
 stream = ExtResource("30_wa3js")
+bus = &"SFX"
 
 [node name="Items" type="Node2D" parent="." unique_id=532706467]
 

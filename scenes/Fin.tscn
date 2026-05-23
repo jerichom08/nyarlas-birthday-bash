@@ -175,9 +175,11 @@ text = "Quit"
 
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=12072064]
 stream = ExtResource("5_lihvx")
+bus = &"SFX"
 
 [node name="fin" type="AudioStreamPlayer2D" parent="." unique_id=1097958621]
 stream = ExtResource("5_rgqr6")
+bus = &"SFX"
 
 [node name="Joan" type="AnimatedSprite2D" parent="." unique_id=1800784171]
 position = Vector2(-566, 332)

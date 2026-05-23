@@ -405,11 +405,14 @@ target_position = Vector2(0, 30)
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=1380790717]
 stream = ExtResource("12_xuqeu")
+bus = &"SFX"
 
 [node name="Arise" type="AudioStreamPlayer2D" parent="." unique_id=1730916985]
 stream = ExtResource("13_u4316")
+bus = &"SFX"
 
 [node name="Chase" type="AudioStreamPlayer2D" parent="." unique_id=34473554]
 stream = ExtResource("14_u4316")
+bus = &"SFX"
 
 [editable path="PlayerDetectionZone"]

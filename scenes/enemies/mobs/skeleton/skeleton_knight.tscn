@@ -522,15 +522,19 @@ debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=722595767]
 stream = ExtResource("9_v3jur")
+bus = &"SFX"
 
 [node name="Arise" type="AudioStreamPlayer2D" parent="." unique_id=1152081222]
 stream = ExtResource("10_nvryg")
+bus = &"SFX"
 
 [node name="Chase" type="AudioStreamPlayer2D" parent="." unique_id=721854543]
 stream = ExtResource("11_e0hme")
+bus = &"SFX"
 
 [node name="Taunt" type="AudioStreamPlayer2D" parent="." unique_id=1919062585]
 stream = ExtResource("18_e0hme")
+bus = &"SFX"
 
 [node name="VisionRay" type="RayCast2D" parent="." unique_id=1330286595]
 target_position = Vector2(-400, 10)

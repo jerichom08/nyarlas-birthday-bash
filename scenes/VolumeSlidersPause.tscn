@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bgk133wbe5hrs"]
+
+[ext_resource type="Script" uid="uid://chcei1bfigf6a" path="res://scenes/volume_sliders.gd" id="1_uqq57"]
+[ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="2_h4jmh"]
+[ext_resource type="Texture2D" uid="uid://co3tqx7l7lctu" path="res://assets/images/UI/pixel_ui_pack/grabber.png" id="3_r8l5n"]
+[ext_resource type="Texture2D" uid="uid://co5h5re517uyy" path="res://assets/images/UI/pixel_ui_pack/grabber_highlight_button.png" id="4_sgsft"]
+[ext_resource type="Texture2D" uid="uid://bwrnri8afaxqp" path="res://assets/images/UI/pixel_ui_pack/slider.png" id="5_3bsxh"]
+[ext_resource type="Texture2D" uid="uid://ddt8qilmqjkp1" path="res://assets/images/UI/pixel_ui_pack/grabber_area.png" id="6_avy53"]
+[ext_resource type="Texture2D" uid="uid://bhmxuuv415n42" path="res://assets/images/UI/pixel_ui_pack/grabber_highlight.png" id="7_1op0i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1sggn"]
+texture = ExtResource("5_3bsxh")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 24.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6vpq"]
+texture = ExtResource("6_avy53")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 24.0
+texture_margin_bottom = 8.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7i7e"]
+texture = ExtResource("7_1op0i")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 24.0
+texture_margin_bottom = 8.0
+expand_margin_right = 4.0
+
+[node name="VolumeSliders" type="Control" unique_id=818128397]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -112.0
+offset_bottom = -112.0
+size_flags_horizontal = 0
+script = ExtResource("1_uqq57")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1797505302]
+layout_mode = 0
+offset_left = -352.00006
+offset_top = 150.0
+offset_right = -167.00006
+offset_bottom = 222.0
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.12941177, 0.101960786, 0.1882353, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_h4jmh")
+theme_override_font_sizes/font_size = 75
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=103896835]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 141.0
+offset_right = -75.0
+offset_bottom = 157.0
+scale = Vector2(5, 5)
+theme_override_icons/grabber = ExtResource("3_r8l5n")
+theme_override_icons/grabber_highlight = ExtResource("4_sgsft")
+theme_override_styles/slider = SubResource("StyleBoxTexture_1sggn")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_e6vpq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_o7i7e")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label2" type="Label" parent="." unique_id=2080963005]
+layout_mode = 0
+offset_left = -317.00003
+offset_top = 245.99998
+offset_right = -203.00003
+offset_bottom = 318.0
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.12941177, 0.101960786, 0.1882353, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_h4jmh")
+theme_override_font_sizes/font_size = 75
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="." unique_id=1115189394]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 236.0
+offset_right = -75.0
+offset_bottom = 252.0
+scale = Vector2(5, 5)
+theme_override_icons/grabber = ExtResource("3_r8l5n")
+theme_override_icons/grabber_highlight = ExtResource("4_sgsft")
+theme_override_styles/slider = SubResource("StyleBoxTexture_1sggn")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_e6vpq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_o7i7e")
+max_value = 1.0
+step = 0.05
+value = 1.0

@@ -18,6 +18,7 @@ region_rect = Rect2(126, 94, 36, 14)
 
 [node name="sound player" type="AudioStreamPlayer" parent="." unique_id=1669316046]
 stream = ExtResource("3_2dq4h")
+bus = &"SFX"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1991324510]
 

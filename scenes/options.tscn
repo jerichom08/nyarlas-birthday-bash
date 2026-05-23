@@ -1,3 +1,104 @@
 [gd_scene format=3 uid="uid://b7cxt0wcedg05"]
 
+[ext_resource type="Texture2D" uid="uid://cyc0q6e6r8s8h" path="res://assets/images/UI/BG.png" id="1_c2u1v"]
+[ext_resource type="Script" uid="uid://3quaipmkejlt" path="res://scenes/options.gd" id="1_uon5e"]
+[ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="2_yjkok"]
+[ext_resource type="PackedScene" uid="uid://c11v2gx8vjqvs" path="res://scenes/VolumeSliders.tscn" id="6_e6vpq"]
+[ext_resource type="AudioStream" uid="uid://bmn1n3rrobhnv" path="res://assets/sounds temp/level sounds/click.mp3" id="9_gycth"]
+[ext_resource type="PackedScene" uid="uid://dq6i2a1c6n38w" path="res://scenes/lvInterface/SceneTransition.tscn" id="10_gyu1t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjkok"]
+texture = ExtResource("1_c2u1v")
+modulate_color = Color(0.34621716, 0.4803471, 0.5474121, 0.5921569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gycth"]
+bg_color = Color(0.15747333, 0.1288, 0.23, 1)
+border_width_bottom = 10
+border_color = Color(0.10602669, 0.086399995, 0.16, 0.94509804)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyu1t"]
+bg_color = Color(0.1292127, 0.10409229, 0.18877175, 1)
+border_width_bottom = 10
+border_color = Color(0.10602669, 0.086399995, 0.16, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5hix"]
+bg_color = Color(0.12941177, 0.105882354, 0.1882353, 1)
+border_width_top = 10
+border_color = Color(0.007843138, 0.007843138, 0.007843138, 0)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="Theme" id="Theme_2iy26"]
+Button/styles/hover = SubResource("StyleBoxFlat_gycth")
+Button/styles/normal = SubResource("StyleBoxFlat_gyu1t")
+Button/styles/pressed = SubResource("StyleBoxFlat_g5hix")
+
 [node name="Options" type="Node2D" unique_id=664035509]
+script = ExtResource("1_uon5e")
+
+[node name="Panel" type="Panel" parent="." unique_id=2090384864]
+offset_left = -751.0
+offset_top = -183.0
+offset_right = 749.0
+offset_bottom = 537.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yjkok")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1077234529]
+position = Vector2(-1, 177)
+
+[node name="Label" type="Label" parent="." unique_id=1967028991]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -489.5
+offset_top = -114.0
+offset_right = 489.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.12941177, 0.101960786, 0.1882353, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 100
+text = "Options"
+horizontal_alignment = 1
+
+[node name="return" type="Button" parent="." unique_id=424636530]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = 298.0
+offset_right = 346.0
+offset_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_2iy26")
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 67
+text = "Return to Main Menu"
+
+[node name="click" type="AudioStreamPlayer2D" parent="." unique_id=388030648]
+stream = ExtResource("9_gycth")
+bus = &"SFX"
+
+[node name="SceneTransition" parent="." unique_id=99968887 instance=ExtResource("10_gyu1t")]
+
+[node name="VolumeSliders" parent="." unique_id=818128397 instance=ExtResource("6_e6vpq")]
+
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

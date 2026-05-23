@@ -429,36 +429,47 @@ scale = Vector2(20, 20)
 
 [node name="LineAttackSFX" type="AudioStreamPlayer2D" parent="." unique_id=498467217]
 stream = ExtResource("11_fcs02")
+bus = &"SFX"
 
 [node name="CircleAttackSFX" type="AudioStreamPlayer2D" parent="." unique_id=1852821923]
 stream = ExtResource("12_myrg7")
+bus = &"SFX"
 
 [node name="TriangleAttackSFX" type="AudioStreamPlayer2D" parent="." unique_id=2017562627]
 stream = ExtResource("13_kvlxm")
+bus = &"SFX"
 
 [node name="RespawnSFX" type="AudioStreamPlayer2D" parent="." unique_id=1144530869]
 stream = ExtResource("14_ugbui")
+bus = &"SFX"
 
 [node name="DeathSFX" type="AudioStreamPlayer2D" parent="." unique_id=1408348057]
 stream = ExtResource("15_uf5tr")
+bus = &"SFX"
 
 [node name="JumpSFX1" type="AudioStreamPlayer2D" parent="." unique_id=1616273582]
 stream = ExtResource("16_uf5tr")
+bus = &"SFX"
 
 [node name="JumpSFX2" type="AudioStreamPlayer2D" parent="." unique_id=844072293]
 stream = ExtResource("17_lgqa7")
+bus = &"SFX"
 
 [node name="JumpSFX3" type="AudioStreamPlayer2D" parent="." unique_id=1764135400]
 stream = ExtResource("18_8ydkj")
+bus = &"SFX"
 
 [node name="FloatSFX" type="AudioStreamPlayer2D" parent="." unique_id=2088000658]
 stream = ExtResource("19_3j4b4")
+bus = &"SFX"
 
 [node name="HurtSFX" type="AudioStreamPlayer2D" parent="." unique_id=1980733769]
 stream = ExtResource("20_8ydkj")
+bus = &"SFX"
 
 [node name="DashSFX" type="AudioStreamPlayer2D" parent="." unique_id=1389506016]
 stream = ExtResource("21_3j4b4")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_shape_entered" from="Hurtbox" to="." method="_on_hurtbox_area_shape_entered"]

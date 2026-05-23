@@ -5,4 +5,5 @@
 [node name="AudioPlayer" type="AudioStreamPlayer" unique_id=41000503]
 process_mode = 3
 autoplay = true
+bus = &"Music"
 script = ExtResource("1_1qhh7")

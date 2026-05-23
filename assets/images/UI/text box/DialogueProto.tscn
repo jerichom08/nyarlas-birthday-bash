@@ -110,5 +110,6 @@ layer_0/tile_data = PackedInt32Array(458740, 0, 0, 524276, 0, 1, 458741, 65536, 
 
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=198921965]
 stream = ExtResource("5_6n3rb")
+bus = &"SFX"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

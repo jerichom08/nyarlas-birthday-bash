@@ -573,26 +573,34 @@ debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="TongueSound" type="AudioStreamPlayer2D" parent="." unique_id=1586476483]
 stream = ExtResource("17_4gpb1")
+bus = &"SFX"
 
 [node name="SpitSound" type="AudioStreamPlayer2D" parent="." unique_id=1458945460]
 stream = ExtResource("18_28ec5")
 volume_db = 10.0
+bus = &"SFX"
 
 [node name="SnoreSound" type="AudioStreamPlayer2D" parent="." unique_id=1058183618]
 stream = ExtResource("19_1kjsf")
+bus = &"SFX"
 
 [node name="RibbitSound" type="AudioStreamPlayer2D" parent="." unique_id=1024424953]
 stream = ExtResource("20_3do7h")
+bus = &"SFX"
 
 [node name="SlimeSound" type="AudioStreamPlayer2D" parent="." unique_id=910327398]
 stream = ExtResource("21_3do7h")
+bus = &"SFX"
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1290783722]
 stream = ExtResource("22_5qjih")
 pitch_scale = 3.62
+bus = &"SFX"
 
 [node name="HealSound" type="AudioStreamPlayer2D" parent="." unique_id=1467425475]
 stream = ExtResource("23_2hc16")
+bus = &"SFX"
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=239106979]
 stream = ExtResource("24_5qjih")
+bus = &"SFX"

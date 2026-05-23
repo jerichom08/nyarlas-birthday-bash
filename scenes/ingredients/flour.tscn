@@ -22,7 +22,9 @@ shape = SubResource("RectangleShape2D_7o7ah")
 
 [node name="Success" type="AudioStreamPlayer2D" parent="." unique_id=329588066]
 stream = ExtResource("3_iuwqw")
+bus = &"SFX"
 
 [node name="Drop" type="AudioStreamPlayer2D" parent="." unique_id=322819312]
 stream = ExtResource("4_7o7ah")
 volume_db = 10.0
+bus = &"SFX"
