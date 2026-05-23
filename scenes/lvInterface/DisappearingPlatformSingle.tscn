@@ -36,6 +36,7 @@ wait_time = 3.0
 [node name="sound_player" type="AudioStreamPlayer2D" parent="." unique_id=197815461]
 stream = ExtResource("3_bq3mo")
 volume_db = 7.761
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

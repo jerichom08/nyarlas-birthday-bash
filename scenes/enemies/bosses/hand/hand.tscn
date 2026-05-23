@@ -180,19 +180,25 @@ target_position = Vector2(200, 30)
 
 [node name="HandIdle" type="AudioStreamPlayer2D" parent="." unique_id=26887666]
 stream = ExtResource("11_7ukfo")
+bus = &"SFX"
 
 [node name="HandTelegraph" type="AudioStreamPlayer2D" parent="." unique_id=1900704963]
 stream = ExtResource("11_yc1la")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="HandAttack" type="AudioStreamPlayer2D" parent="." unique_id=287129151]
 stream = ExtResource("12_v2mx8")
+bus = &"SFX"
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=236050027]
 stream = ExtResource("15_xwnrt")
+bus = &"SFX"
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=1317534016]
 stream = ExtResource("16_ff2jo")
+bus = &"SFX"
 
 [node name="HandHurt" type="AudioStreamPlayer2D" parent="." unique_id=1534625807]
 stream = ExtResource("17_pwxef")
+bus = &"SFX"

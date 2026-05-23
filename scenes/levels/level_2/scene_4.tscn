@@ -890,14 +890,17 @@ region_rect = Rect2(24, 136, 112, 112)
 [node name="AudioCorrect" type="AudioStreamPlayer2D" parent="." unique_id=1607674467]
 position = Vector2(-105, -10)
 stream = ExtResource("24_aue0u")
+bus = &"SFX"
 
 [node name="AudioWrong" type="AudioStreamPlayer2D" parent="." unique_id=842490417]
 position = Vector2(-75, -11)
 stream = ExtResource("25_lq0co")
+bus = &"SFX"
 
 [node name="AudioComplete" type="AudioStreamPlayer2D" parent="." unique_id=1213709587]
 position = Vector2(-146, -62)
 stream = ExtResource("26_xglgs")
+bus = &"SFX"
 
 [node name="TurnipNpc" parent="." unique_id=960637076 instance=ExtResource("28_l2ibj")]
 position = Vector2(-520.10565, -184.01172)

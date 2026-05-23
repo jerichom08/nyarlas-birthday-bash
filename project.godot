@@ -15,6 +15,10 @@ run/main_scene="uid://8sbrqv2cxiec"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dek8wt8wcyufx"
+
 [autoload]
 
 PuzzleManager="*uid://c8iupug2hqyf1"
@@ -25,6 +29,7 @@ PlayerStats="*uid://d2oaxovfk5r1d"
 Transition="*uid://ynmomjby0124"
 PauseMenu="*uid://csdwbe46yyepm"
 IngredientManager="*uid://cosyctrnuuv2f"
+Cursor="*uid://n6sq7hx6uvq6"
 
 [display]
 

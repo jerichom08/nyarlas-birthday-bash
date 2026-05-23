@@ -348,6 +348,7 @@ debug_color = Color(0, 0, 1, 0.08627451)
 [node name="SpiderHit" type="AudioStreamPlayer2D" parent="." unique_id=1232922571]
 stream = ExtResource("7_kxsv6")
 volume_db = 8.925
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

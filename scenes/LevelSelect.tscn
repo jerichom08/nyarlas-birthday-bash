@@ -13,7 +13,7 @@
 texture = ExtResource("1_egmj1")
 modulate_color = Color(0.34621716, 0.4803471, 0.5474121, 0.5921569)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7n47"]
 bg_color = Color(0.15747333, 0.1288, 0.23, 1)
 border_width_bottom = 10
 border_color = Color(0.10602669, 0.086399995, 0.16, 0.94509804)
@@ -22,7 +22,7 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0t37j"]
 bg_color = Color(0.1292127, 0.10409229, 0.18877175, 1)
 border_width_bottom = 10
 border_color = Color(0.10602669, 0.086399995, 0.16, 1)
@@ -31,7 +31,7 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33358"]
 bg_color = Color(0.12941177, 0.105882354, 0.1882353, 1)
 border_width_top = 10
 border_color = Color(0.007843138, 0.007843138, 0.007843138, 0)
@@ -41,9 +41,9 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [sub_resource type="Theme" id="Theme_egmj1"]
-Button/styles/hover = SubResource("StyleBoxFlat_wu84c")
-Button/styles/normal = SubResource("StyleBoxFlat_8ln24")
-Button/styles/pressed = SubResource("StyleBoxFlat_bqqt6")
+Button/styles/hover = SubResource("StyleBoxFlat_t7n47")
+Button/styles/normal = SubResource("StyleBoxFlat_0t37j")
+Button/styles/pressed = SubResource("StyleBoxFlat_33358")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxdfm"]
 atlas = ExtResource("5_fmuyb")
@@ -351,6 +351,7 @@ flip_h = true
 
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=291589207]
 stream = ExtResource("8_t7n47")
+bus = &"SFX"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Button Manager/lv1" to="." method="_on_lv_1_pressed"]

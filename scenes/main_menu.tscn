@@ -213,6 +213,7 @@ text = "Quit"
 
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=1814461550]
 stream = ExtResource("7_oa1go")
+bus = &"SFX"
 
 [connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button Manager/Options" to="." method="_on_options_pressed"]

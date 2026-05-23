@@ -356,6 +356,7 @@ shape = SubResource("RectangleShape2D_lv6c1")
 [node name="lava" type="AudioStreamPlayer2D" parent="." unique_id=1899868064]
 stream = ExtResource("5_15x7e")
 volume_db = 6.209
+bus = &"SFX"
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=141051954]
 
@@ -368,6 +369,7 @@ shape = SubResource("CircleShape2D_lv6c1")
 [node name="burnt" type="AudioStreamPlayer2D" parent="." unique_id=898108520]
 stream = ExtResource("6_lv6c1")
 volume_db = 12.935
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_death_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_lava_sound_area_body_entered"]

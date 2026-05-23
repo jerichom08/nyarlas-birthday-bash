@@ -386,12 +386,16 @@ position = Vector2(1, 1)
 [node name="MinotaurHeavyAttack" type="AudioStreamPlayer2D" parent="." unique_id=408975447]
 stream = ExtResource("13_3ahq4")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="MinotaurLightAttack" type="AudioStreamPlayer2D" parent="." unique_id=165254215]
 stream = ExtResource("14_3u2jj")
+bus = &"SFX"
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=2128238667]
 stream = ExtResource("16_f6s53")
+bus = &"SFX"
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=997630865]
 stream = ExtResource("17_qr0nc")
+bus = &"SFX"

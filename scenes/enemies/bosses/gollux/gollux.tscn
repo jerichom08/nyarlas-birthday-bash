@@ -690,10 +690,12 @@ debug_color = Color(0, 1, 0, 0.41960785)
 
 [node name="GolluxLightAttack" type="AudioStreamPlayer2D" parent="." unique_id=938349953]
 stream = ExtResource("14_v1gtx")
+bus = &"SFX"
 
 [node name="GolluxHeavyAttack" type="AudioStreamPlayer2D" parent="." unique_id=1358888515]
 stream = ExtResource("14_v1gtx")
 pitch_scale = 0.5
+bus = &"SFX"
 
 [node name="LightSpawn" type="Marker2D" parent="." unique_id=1841525444]
 
@@ -701,9 +703,11 @@ pitch_scale = 0.5
 
 [node name="Defeat" type="AudioStreamPlayer2D" parent="." unique_id=232277418]
 stream = ExtResource("19_q61tx")
+bus = &"SFX"
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=71275028]
 stream = ExtResource("21_xigbe")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

@@ -162,12 +162,15 @@ debug_color = Color(0, 0, 0.69803923, 0.12156863)
 [node name="RatEmerge" type="AudioStreamPlayer2D" parent="." unique_id=172865707]
 stream = ExtResource("6_oq67y")
 volume_db = 24.0
+bus = &"SFX"
 
 [node name="RatHit" type="AudioStreamPlayer2D" parent="." unique_id=1733828019]
 stream = ExtResource("7_53nr7")
 volume_db = 4.269
+bus = &"SFX"
 
 [node name="RatIdle" type="AudioStreamPlayer2D" parent="." unique_id=1739115431]
 stream = ExtResource("12_oyw1n")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

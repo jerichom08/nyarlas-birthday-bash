@@ -22,7 +22,9 @@ debug_color = Color(1, 1, 0, 0.41960785)
 
 [node name="Success" type="AudioStreamPlayer2D" parent="." unique_id=409279840]
 stream = ExtResource("3_qqldg")
+bus = &"SFX"
 
 [node name="Drop" type="AudioStreamPlayer2D" parent="." unique_id=944991171]
 stream = ExtResource("4_bi3u6")
 volume_db = 10.0
+bus = &"SFX"

@@ -1150,14 +1150,17 @@ metadata/_edit_use_anchors_ = true
 [node name="AudioCorrect" type="AudioStreamPlayer2D" parent="." unique_id=1367123272]
 position = Vector2(-105, -10)
 stream = ExtResource("25_wmega")
+bus = &"SFX"
 
 [node name="AudioWrong" type="AudioStreamPlayer2D" parent="." unique_id=1309823867]
 position = Vector2(-75, -11)
 stream = ExtResource("26_j7pju")
+bus = &"SFX"
 
 [node name="AudioComplete" type="AudioStreamPlayer2D" parent="." unique_id=2037922064]
 position = Vector2(-146, -62)
 stream = ExtResource("27_uougs")
+bus = &"SFX"
 
 [node name="Items" type="Node2D" parent="." unique_id=229748280]
 
