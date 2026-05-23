@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cebymkk2gghii" path="res://scenes/lvInterface/HiddenPlatform.tscn" id="20_d8dm4"]
 [ext_resource type="PackedScene" uid="uid://b8omtekml5q2k" path="res://scenes/lvInterface/button.tscn" id="21_lmty0"]
 [ext_resource type="PackedScene" uid="uid://bwilndgwo5sff" path="res://scenes/puzzles/puzzle_5/TestItem.tscn" id="23_ph1vo"]
-[ext_resource type="Texture2D" uid="uid://dxghq3d66amnl" path="res://assets/images/food/cookie_1.png" id="24_x31aq"]
+[ext_resource type="Texture2D" uid="uid://bm064av7x8nut" path="res://assets/images/food/cookie_1.png" id="24_x31aq"]
 [ext_resource type="Texture2D" uid="uid://p8dankw132qh" path="res://assets/images/food/cookie_11.png" id="25_5c0ee"]
 [ext_resource type="Texture2D" uid="uid://cahawb4ghtdk7" path="res://assets/images/food/cookie_3.png" id="25_qpovd"]
 [ext_resource type="AudioStream" uid="uid://cqa6uhfvm72v2" path="res://assets/sounds temp/status sounds/Retro PowerUP 09.wav" id="25_x31aq"]
@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://35oise2jki27" path="res://assets/images/food/cookie_8.png" id="27_3id5d"]
 [ext_resource type="AudioStream" uid="uid://e5xbfukr8s28" path="res://assets/sounds temp/status sounds/Retro PowerUP StereoUP 05.wav" id="27_5c0ee"]
 [ext_resource type="PackedScene" uid="uid://dlckg22mobjbq" path="res://scenes/mobs/turnipNPC.tscn" id="29_x31aq"]
-[ext_resource type="Texture2D" uid="uid://s1g1wtgvb12x" path="res://scripts/UI/turnipFace.png" id="30_5c0ee"]
+[ext_resource type="Texture2D" uid="uid://csx60yopamsgf" path="res://scripts/UI/turnipFace.png" id="30_5c0ee"]
 [ext_resource type="PackedScene" uid="uid://cwtwx8kf8338r" path="res://scripts/UI/rpg_style_talk.tscn" id="31_qpovd"]
 [ext_resource type="PackedScene" uid="uid://bgnvfv570pkfx" path="res://scenes/lvInterface/outofbound.tscn" id="32_3id5d"]
 [ext_resource type="PackedScene" uid="uid://d20e0iuxw8g78" path="res://scenes/enemies/mobs/skeleton/skeleton.tscn" id="32_5c0ee"]
@@ -397,6 +397,7 @@ texture_region_size = Vector2i(18, 18)
 12:0/0 = 0
 13:0/0 = 0
 14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.3547688, -7.2252846, 5.484253, -7.573491, 9, -0.78346443, -9, -0.9575672)
 15:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
@@ -795,9 +796,9 @@ position = Vector2(373, 135)
 scale = Vector2(3, 3)
 
 [node name="foliage2" type="TileMapLayer" parent="." unique_id=1300485581]
-position = Vector2(805, 1)
+position = Vector2(805, 25)
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAD6//3/AAAIAAIAAAD6//7/AAAIAAMAAAD6//z/AAAIAAIAAAD7//z/AAAJAAEAAAD7/wQAAAAAAAQAAAD8/wQAAAABAAQAAADl/wAAAAAAAAQAACDm/wAAAAABAAQAACDy//3/AAAMAAYAAADp//r/AAAKAAQAAAD0/wUAAAAIAAQAAAD1/wUAAAAJAAQAAAA=")
+tile_map_data = PackedByteArray("AAD7/wQAAAAAAAQAAAD8/wQAAAABAAQAAADl/wAAAAAAAAQAACDm/wAAAAABAAQAACDy//3/AAAMAAYAAADp//r/AAAKAAQAAAD0/wUAAAAIAAQAAAD1/wUAAAAJAAQAAADr/wQAAAAOAAAAAAD2/wQAAAAOAAAAAAD6//z/AAAIAAMAAAD6//v/AAAIAAIAAAD7//z/AAAJAAEAAAA=")
 tile_set = SubResource("TileSet_5y2x0")
 
 [node name="basic tiles" type="TileMapLayer" parent="." unique_id=1546364109]
@@ -809,7 +810,7 @@ tile_set = SubResource("TileSet_5y2x0")
 [node name="foliage" type="TileMapLayer" parent="." unique_id=137678146]
 position = Vector2(812.9999, 1)
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AADm/wEAAAAIAAMAAADn/wEAAAAJAAEAAADm/wAAAAAIAAIAAADv//v/AAAIAAIAAADv//z/AAAIAAMAAADv//3/AAAIAAEAAADw//3/AAAJAAIAAAD6/wMAAAAJAAIAABD6/wQAAAAJAAMAABD5/wQAAAACAAUAAAD6/wEAAAAJAAEAAAD8/wUAAAAOAAAAAADm//n/AAAOAAAAAAD8//7/AgARAAcAAADw/wAAAgARAAcAAADq/wUAAgARAAcAAADo//n/AgARAAcAAAD8//r/AgARAAcAAAD5/wEAAgAIAAYAAADl//z/AgAIAAYAAAD2/wQAAgAFAAcAAAD3/wQAAgAEAAcAAADo/wQAAgAEAAcAAADr////AgAEAAcAACDm//z/AgAJAAYAAADp/wQAAgAJAAYAAAA=")
+tile_map_data = PackedByteArray("AADm/wEAAAAIAAMAAADn/wEAAAAJAAEAAADm/wAAAAAIAAIAAADv//v/AAAIAAIAAADv//z/AAAIAAMAAADv//3/AAAIAAEAAADw//3/AAAJAAIAAAD6/wMAAAAJAAIAABD6/wQAAAAJAAMAABD5/wQAAAACAAUAAAD6/wEAAAAJAAEAAAD8/wUAAAAOAAAAAADm//n/AAAOAAAAAAD8//7/AgARAAcAAADw/wAAAgARAAcAAADq/wUAAgARAAcAAADo//n/AgARAAcAAAD8//r/AgARAAcAAAD5/wEAAgAIAAYAAADl//z/AgAIAAYAAAD3/wQAAgAEAAcAAADo/wQAAgAEAAcAAADr////AgAEAAcAACDm//z/AgAJAAYAAADp/wQAAgAJAAYAAAA=")
 tile_set = SubResource("TileSet_5y2x0")
 
 [node name="Player" parent="." unique_id=2085610372 instance=ExtResource("6_u8b8i")]
