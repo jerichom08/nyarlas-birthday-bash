@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://de3jnp0uqmmde" path="res://scripts/enemies/ingredient.gd" id="1_xwl8b"]
 [ext_resource type="Texture2D" uid="uid://cgnajnbu4w3ha" path="res://assets/images/ingredients/milk.png" id="2_ned81"]
-[ext_resource type="AudioStream" uid="uid://3yl8jvrw1fac" path="res://assets/sounds temp/level sounds/success.mp3" id="3_ned81"]
+[ext_resource type="AudioStream" uid="uid://cdww54bn1auq5" path="res://assets/sounds temp/temp/ingredient pick up.mp3" id="3_1kls7"]
 [ext_resource type="AudioStream" uid="uid://1jr5wkxfmt30" path="res://assets/sounds temp/enemy sounds/ingredient_drop.wav" id="4_1kls7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kls7"]
@@ -21,7 +21,7 @@ position = Vector2(3.5, 2.5)
 shape = SubResource("RectangleShape2D_1kls7")
 
 [node name="Success" type="AudioStreamPlayer2D" parent="." unique_id=1976511330]
-stream = ExtResource("3_ned81")
+stream = ExtResource("3_1kls7")
 bus = &"SFX"
 
 [node name="Drop" type="AudioStreamPlayer2D" parent="." unique_id=569604587]

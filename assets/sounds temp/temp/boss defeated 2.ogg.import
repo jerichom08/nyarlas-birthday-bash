@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckt7h3nl68o7j"
+path="res://.godot/imported/boss defeated 2.ogg-67fd13e7fb70707b1c6c95121f95a936.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds temp/temp/boss defeated 2.ogg"
+dest_files=["res://.godot/imported/boss defeated 2.ogg-67fd13e7fb70707b1c6c95121f95a936.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

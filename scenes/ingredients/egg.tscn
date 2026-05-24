@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnjgqthgdqwjx" path="res://assets/images/ingredients/egg.png" id="1_6hgkf"]
 [ext_resource type="Script" uid="uid://de3jnp0uqmmde" path="res://scripts/enemies/ingredient.gd" id="1_f0cn5"]
-[ext_resource type="AudioStream" uid="uid://3yl8jvrw1fac" path="res://assets/sounds temp/level sounds/success.mp3" id="3_qqldg"]
+[ext_resource type="AudioStream" uid="uid://cdww54bn1auq5" path="res://assets/sounds temp/temp/ingredient pick up.mp3" id="3_bi3u6"]
 [ext_resource type="AudioStream" uid="uid://1jr5wkxfmt30" path="res://assets/sounds temp/enemy sounds/ingredient_drop.wav" id="4_bi3u6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6hgkf"]
@@ -21,7 +21,7 @@ shape = SubResource("CapsuleShape2D_6hgkf")
 debug_color = Color(1, 1, 0, 0.41960785)
 
 [node name="Success" type="AudioStreamPlayer2D" parent="." unique_id=409279840]
-stream = ExtResource("3_qqldg")
+stream = ExtResource("3_bi3u6")
 bus = &"SFX"
 
 [node name="Drop" type="AudioStreamPlayer2D" parent="." unique_id=944991171]

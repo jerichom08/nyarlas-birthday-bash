@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://bdi2hxkkiq847" path="res://assets/sounds temp/player sounds/jump1.wav" id="16_uf5tr"]
 [ext_resource type="AudioStream" uid="uid://b77w5nw4507uu" path="res://assets/sounds temp/player sounds/jump2.wav" id="17_lgqa7"]
 [ext_resource type="AudioStream" uid="uid://baicq30xm1nwm" path="res://assets/sounds temp/player sounds/jump3.wav" id="18_8ydkj"]
-[ext_resource type="AudioStream" uid="uid://87qb4haygegw" path="res://assets/sounds temp/player sounds/float.wav" id="19_3j4b4"]
+[ext_resource type="AudioStream" uid="uid://dn6pfn8dwlqwu" path="res://assets/sounds temp/player sounds/float.wav" id="19_3j4b4"]
 [ext_resource type="AudioStream" uid="uid://dmfuk6q453cgm" path="res://assets/sounds temp/player sounds/hurt.wav" id="20_8ydkj"]
 [ext_resource type="AudioStream" uid="uid://baytb822hsmav" path="res://assets/sounds temp/player sounds/dash.wav" id="21_3j4b4"]
 
@@ -449,18 +449,22 @@ bus = &"SFX"
 
 [node name="JumpSFX1" type="AudioStreamPlayer2D" parent="." unique_id=1616273582]
 stream = ExtResource("16_uf5tr")
+pitch_scale = 1.07
 bus = &"SFX"
 
 [node name="JumpSFX2" type="AudioStreamPlayer2D" parent="." unique_id=844072293]
 stream = ExtResource("17_lgqa7")
+pitch_scale = 1.07
 bus = &"SFX"
 
 [node name="JumpSFX3" type="AudioStreamPlayer2D" parent="." unique_id=1764135400]
 stream = ExtResource("18_8ydkj")
+pitch_scale = 1.07
 bus = &"SFX"
 
 [node name="FloatSFX" type="AudioStreamPlayer2D" parent="." unique_id=2088000658]
 stream = ExtResource("19_3j4b4")
+pitch_scale = 0.8
 bus = &"SFX"
 
 [node name="HurtSFX" type="AudioStreamPlayer2D" parent="." unique_id=1980733769]

@@ -6,12 +6,12 @@ extends Area2D
 @export var collect_time := 0.2
 @export var hud_scale := Vector2(0.5, 0.5)
 
+@export var floor_y := 525
+
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var success_sfx: AudioStreamPlayer2D = $Success
 @onready var drop_sfx: AudioStreamPlayer2D = $Drop
 
-
-@export var floor_y := 525
 var landed := false
 var hover_time := 0.0
 var collected := false
@@ -19,7 +19,15 @@ var collected := false
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
-	drop_sfx.play()
+
+	# detach drop sound so it survives queue_free
+	var drop := drop_sfx
+
+	drop.reparent(get_tree().current_scene)
+	drop.global_position = global_position
+	drop.play()
+
+	drop.finished.connect(drop.queue_free)
 
 
 func _process(delta: float) -> void:
@@ -49,16 +57,23 @@ func _on_body_entered(body: Node2D) -> void:
 
 	if not body.is_in_group("player"):
 		return
-	
-	
+
 	collected = true
 	collect(body)
 
 
 func collect(player: Node2D) -> void:
 	IngredientManager.add_ingredient(sprite.texture, hud_scale)
-	
-	success_sfx.play()
+
+	# detach collect sound so it survives queue_free
+	var success := success_sfx
+
+	success.reparent(get_tree().current_scene)
+	success.global_position = global_position
+	success.play()
+
+	success.finished.connect(success.queue_free)
+
 	monitoring = false
 
 	var tween := create_tween()
@@ -85,6 +100,5 @@ func collect(player: Node2D) -> void:
 		0.0,
 		collect_time
 	)
-	
 
 	tween.chain().tween_callback(queue_free)

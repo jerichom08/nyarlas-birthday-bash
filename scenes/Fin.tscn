@@ -113,17 +113,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -489.5
-offset_top = -3.0
-offset_right = 489.5
-offset_bottom = 131.0
+offset_left = -103.0
+offset_top = 53.0
+offset_right = 104.0
+offset_bottom = 205.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0.12941177, 0.101960786, 0.1882353, 1)
 theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("3_ya8vd")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 160
 text = "Fin"
 horizontal_alignment = 1
 
@@ -143,24 +143,6 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -345.0
-offset_top = 287.0
-offset_right = 346.0
-offset_bottom = 383.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_egmj1")
-theme_override_fonts/font = ExtResource("3_ya8vd")
-theme_override_font_sizes/font_size = 67
-text = "Return to Title Screen"
-
-[node name="Quit" type="Button" parent="Button Manager" unique_id=783112853]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -345.0
 offset_top = 410.0
 offset_right = 346.0
 offset_bottom = 506.0
@@ -169,7 +151,7 @@ grow_vertical = 2
 theme = SubResource("Theme_egmj1")
 theme_override_fonts/font = ExtResource("3_ya8vd")
 theme_override_font_sizes/font_size = 67
-text = "Quit"
+text = "Return to Title Screen"
 
 [node name="SceneTransition" parent="." unique_id=99968887 instance=ExtResource("4_3knc2")]
 
@@ -182,10 +164,10 @@ stream = ExtResource("5_rgqr6")
 bus = &"SFX"
 
 [node name="Joan" type="AnimatedSprite2D" parent="." unique_id=1800784171]
+modulate = Color(0.033428535, 0.013568499, 0.017365502, 1)
 position = Vector2(-566, 332)
 scale = Vector2(8.09375, 8.09375)
 sprite_frames = SubResource("SpriteFrames_4acgi")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Button Manager/return" to="." method="_on_return_pressed"]
-[connection signal="pressed" from="Button Manager/Quit" to="." method="_on_quit_pressed"]

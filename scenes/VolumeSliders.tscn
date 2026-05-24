@@ -56,10 +56,10 @@ horizontal_alignment = 1
 
 [node name="MusicSlider" type="HSlider" parent="." unique_id=103896835]
 layout_mode = 0
-offset_left = -445.0001
-offset_top = 276.0
-offset_right = -370.0001
-offset_bottom = 292.0
+offset_left = -104.0
+offset_top = 148.00005
+offset_right = -17.80001
+offset_bottom = 164.00005
 scale = Vector2(5, 5)
 theme_override_icons/grabber = ExtResource("2_8bnl5")
 theme_override_icons/grabber_highlight = ExtResource("3_087ll")
@@ -72,10 +72,10 @@ value = 1.0
 
 [node name="Label2" type="Label" parent="." unique_id=2080963005]
 layout_mode = 0
-offset_left = 206.0
-offset_top = 150.0
-offset_right = 320.0
-offset_bottom = 222.0
+offset_left = -352.0
+offset_top = 274.0
+offset_right = -238.0
+offset_bottom = 346.0
 size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0.12941177, 0.101960786, 0.1882353, 1)
 theme_override_constants/outline_size = 30
@@ -86,10 +86,10 @@ horizontal_alignment = 1
 
 [node name="SFXSlider" type="HSlider" parent="." unique_id=1115189394]
 layout_mode = 0
-offset_left = 77.99988
-offset_top = 276.0
-offset_right = 152.99988
-offset_bottom = 292.0
+offset_left = -104.0
+offset_top = 265.0
+offset_right = -17.800003
+offset_bottom = 281.0
 scale = Vector2(5, 5)
 theme_override_icons/grabber = ExtResource("2_8bnl5")
 theme_override_icons/grabber_highlight = ExtResource("3_087ll")

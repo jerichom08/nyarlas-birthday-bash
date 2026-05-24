@@ -27,28 +27,39 @@ var choosing: bool = false
 var dialogue_completed: bool = false
 
 var dialogue_array: Array = [
-	{"speaker": "Joan", "text": ". L-Lilith? I’ve been searching for you..", "icon": "joan"},
-	{"speaker": "Joan", "text": ". Can you believe that it’s been 15 years since the great war?", "icon": "joan"},
-	{"speaker": "Joan", "text": ". I don’t think I’d ever have come close to defeating the demon king without you.", "icon": "joan"},
-	{"speaker": "Lilith", "text": ". Joan, I thought you…", "icon": "lilith"},
-	{"speaker": "Joan", "text": ". How could you just disappear without any trace!", "icon": "joan"},
-	{"speaker": "Joan", "text": ". Did that kiss not mean anything to you?", "icon": "joan"},
-	{"speaker": "Lilith", "text": ". After I felt your last breath, I couldn’t bear it anymore.", "icon": "lilith"},
-	{"speaker": "Lilith", "text": ". So I took Nyarla with me and warped to a dimension with no other soul.", "icon": "lilith"},
-	{"speaker": "Joan", "text": ". I thought I was a goner too, but I was glad that I could feel your warmth one last time.", "icon": "joan"},
-	{"speaker": "Joan", "text": ". But soon after, the saintess of Zenith brought me back to life, and I’ve been looking for you since.", "icon": "joan"},
-	{"speaker": "Joan", "text": ". I'm glad I trusted my gut feeling that you'd at least visit the place my grave once resided...", "icon": "joan"},
-	{"speaker": "Lilith", "text": ". Oh Joan, a world without you... everything in me shattered and I had no will to go on.", "icon": "lilith"},
-	{"speaker": "Lilith", "text": ". I hath locked myself away and was only able to bring myself to go out today for Nyarla's sake.", "icon": "lilith"},
-	{"speaker": "Lilith", "text": ". Joan, if only I knew…", "icon": "lilith"},
-	{"speaker": "Joan", "text": ". Throughout our adventure, what kept me going was this.", "icon": "joan"},
-	{"speaker": "Joan", "text": ". I wanted to properly propose to you after everything ended.", "icon": "joan"},
-	{"speaker": "Lilith", "text": ". !!", "icon": "lilith"},
-	{"speaker": "Joan", "text": ". So Lilith, will you marry me?", "icon": "joan"}
+{"speaker": "Joan", "text": ". L-Lilith… is that you?", "icon": "joan"},
+{"speaker": "Lilith", "text": ". Joan? What are you doing he—", "icon": "lilith"},
+{"speaker": "Joan", "text": ". How could you just vanish without a trace like that? Did I mean so little to you? Did that kiss—", "icon": "joan"},
+{"speaker": "Lilith", "text": ". Oh, Joan, that’s… I thought you would’ve—", "icon": "lilith"},
+{"speaker": "Joan", "text": ". Forgotten you? After everything? There hasn’t been a single day I didn’t spend looking for you.", "icon": "joan"},
+{"speaker": "Joan", "text": ". Everyone said you were dead, but I refused to believe them.", "icon": "joan"},
+{"speaker": "Joan", "text": ". I refused to believe that my Lily would go down just like that.", "icon": "joan"},
+{"speaker": "Lilith", "text": ". After that fatal blow you received shielding me, I could feel your soul slipping away. I was so scared, Joan, I—", "icon": "lilith"},
+{"speaker": "Joan", "text": ". I know, my Lilith. Please, shed no more tears. It hurts me to see you make that face.", "icon": "joan"},
+{"speaker": "Joan", "text": ". I can still taste the salt from your tears that fell onto my face, and hear your trembling voice calling my name.", "icon": "joan"},
+{"speaker": "Lilith", "text": ". ...", "icon": "lilith"},
+{"speaker": "Joan", "text": ". And the forbidden spell you used to resurrect me which made you lose most your powers.", "icon": "joan"},
+{"speaker": "Lilith", "text": ". Joan… you are the hero loved by all. You had such a bright future ahead of you, so much glory waiting for you. You were my light.", "icon": "lilith"},
+{"speaker": "Lilith", "text": ". And I…", "icon": "lilith"},
+{"speaker": "Lilith", "text": ". I don’t deserve to stand by your side.", "icon": "lilith"},
+{"speaker": "Lilith", "text": ". I’ve brought you nothing but misfortune. I thought it would be best for me to disappear and—", "icon": "lilith"},
+{"speaker": "Joan", "text": ". And yet you still came back to the place where we last saw each other. I knew what we had was real.", "icon": "joan"},
+{"speaker": "Lilith", "text": ". No, Joan, you don’t understand. I already led you to your death once. Forget we ever met… and be happy.", "icon": "lilith"},
+{"speaker": "Joan", "text": ". Forget? Be happy? You are my happiness.", "icon": "joan"},
+{"speaker": "Joan", "text": ". Being a hero means nothing to me if I can’t even be with the one person who matters the most to me.", "icon": "joan"},
+{"speaker": "Joan", "text": ". So my sweet Lily, don’t blame yourself...", "icon": "joan"},
+{"speaker": "Joan", "text": ". Even if I could go back in time, I would still sacrifice myself for you a hundred times over...", "icon": "joan"},
+{"speaker": "Joan", "text": ". Not out of my duty as a hero, nor as some act of kindness—but because it’s you. Only you.", "icon": "joan"},
+{"speaker": "Lilith", "text": ". Those sweet words of yours… please, don’t tempt me. I might lose what little reason I have left.", "icon": "lilith"},
+{"speaker": "Joan", "text": ". Then I’m afraid I must continue.", "icon": "joan"},
+{"speaker": "Joan", "text": ". Throughout our adventure… this is what kept me going.", "icon": "joan"},
+{"speaker": "Joan", "text": ". I wanted to properly propose to you once everything was over.", "icon": "joan"},
+{"speaker": "Lilith", "text": ". !!", "icon": "lilith"},
+{"speaker": "Joan", "text": ". So, Lilith… will you marry me?", "icon": "joan"}
 ]
 
 var after_choice_dialogue: Array = [
-	{"speaker": "Lilith", "text": ". Joan! Of course i'd marry you I feel like my eyes and ears are decieving me", "icon": "lilith"},
+	{"speaker": "Lilith", "text": ". Joan! Of course...", "icon": "lilith"},
 	{"speaker": "Lilith", "text": ". If this is a dream, I'm afraid I'd never want to wake up", "icon": "lilith"},
 	{"speaker": "Joan", "text": ". I’ll make you the happiest you’ll ever be. I love you.", "icon": "joan"},
 	{"speaker": "Lilith", "text": ". I love you too, my Joan.", "icon": "lilith"},
@@ -137,7 +148,7 @@ func show_dialogue() -> void:
 
 
 func play_line_effect(text: String) -> void:
-	if text == ". Throughout our adventure, what kept me going was this.":
+	if text == ". Throughout our adventure… this is what kept me going.":
 		$ring.play("default")
 		$animate.play("ring up")
 		$woa.play()

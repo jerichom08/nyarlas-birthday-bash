@@ -4,37 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="2_myx47"]
 [ext_resource type="PackedScene" uid="uid://bgk133wbe5hrs" path="res://scenes/VolumeSlidersPause.tscn" id="3_kukqi"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
-bg_color = Color(0.15747333, 0.1288, 0.23, 1)
-border_width_bottom = 10
-border_color = Color(0.10602669, 0.086399995, 0.16, 0.94509804)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbmy8"]
-bg_color = Color(0.1292127, 0.10409229, 0.18877175, 1)
-border_width_bottom = 10
-border_color = Color(0.10602669, 0.086399995, 0.16, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jk1qb"]
-bg_color = Color(0.12941177, 0.105882354, 0.1882353, 1)
-border_width_top = 10
-border_color = Color(0.007843138, 0.007843138, 0.007843138, 0)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
-[sub_resource type="Theme" id="Theme_kukqi"]
-Button/styles/hover = SubResource("StyleBoxFlat_oa1go")
-Button/styles/normal = SubResource("StyleBoxFlat_tbmy8")
-Button/styles/pressed = SubResource("StyleBoxFlat_jk1qb")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kukqi"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=308178]
 process_mode = 3
@@ -86,27 +56,38 @@ horizontal_alignment = 1
 
 [node name="Restart" type="Button" parent="PausePanel/MarginContainer/VBoxContainer" unique_id=1035193299]
 layout_mode = 2
-theme = SubResource("Theme_kukqi")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.3403434, 0.3046938, 0.56832415, 1)
+theme_override_colors/font_hover_color = Color(0.5499879, 0.50788003, 0.85880774, 1)
 theme_override_fonts/font = ExtResource("2_myx47")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kukqi")
 text = "Restart
 "
 
-[node name="Options" type="Button" parent="PausePanel/MarginContainer/VBoxContainer" unique_id=1389967933]
+[node name="Options" type="Button" parent="PausePanel/MarginContainer/VBoxContainer" unique_id=909290915]
 layout_mode = 2
-theme = SubResource("Theme_kukqi")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.3403434, 0.3046938, 0.56832415, 1)
+theme_override_colors/font_hover_color = Color(0.5499879, 0.50788003, 0.85880774, 1)
 theme_override_fonts/font = ExtResource("2_myx47")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kukqi")
 text = "Options
 "
 
-[node name="MainMenu" type="Button" parent="PausePanel/MarginContainer/VBoxContainer" unique_id=1383570419]
+[node name="MainMenu" type="Button" parent="PausePanel/MarginContainer/VBoxContainer" unique_id=1791757049]
 layout_mode = 2
-theme = SubResource("Theme_kukqi")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.3403434, 0.3046938, 0.56832415, 1)
+theme_override_colors/font_hover_color = Color(0.5499879, 0.50788003, 0.85880774, 1)
 theme_override_fonts/font = ExtResource("2_myx47")
 theme_override_font_sizes/font_size = 40
-text = "Main Menu
-"
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kukqi")
+text = "Quit"
 
 [node name="OptionsPanel" type="Control" parent="." unique_id=1468991456]
 visible = false
@@ -118,28 +99,31 @@ offset_bottom = 40.0
 [node name="VolumeSliders" parent="OptionsPanel" unique_id=818128397 instance=ExtResource("3_kukqi")]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -12.375
-anchor_top = 4.1499987
-anchor_right = -12.375
-anchor_bottom = 4.1499987
+anchor_left = -12.825
+anchor_top = 4.924999
+anchor_right = -12.825
+anchor_bottom = 4.924999
 offset_left = 1200.0
 offset_top = 98.0
 offset_right = 1200.0
 offset_bottom = 98.0
 grow_horizontal = 0
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.54, 0.54)
 
-[node name="Return" type="Button" parent="OptionsPanel" unique_id=1002762918]
+[node name="Return" type="Button" parent="OptionsPanel" unique_id=583754557]
 layout_mode = 0
-offset_left = 500.0
-offset_top = 487.0
-offset_right = 800.0
-offset_bottom = 535.0
-theme = SubResource("Theme_kukqi")
+offset_left = 586.0
+offset_top = 483.0
+offset_right = 714.0
+offset_bottom = 529.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0.3403434, 0.3046938, 0.56832415, 1)
+theme_override_colors/font_hover_color = Color(0.5499879, 0.50788003, 0.85880774, 1)
 theme_override_fonts/font = ExtResource("2_myx47")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kukqi")
 text = "Return
-
 "
 
 [node name="Label" type="Label" parent="OptionsPanel" unique_id=408367896]
