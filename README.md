@@ -8,7 +8,11 @@ The easiest way to play is through our pre-built release:
 
 1. Go to the **Releases** section of this repository  
 2. Download the latest version  
-3. Follow the instructions provided in the release  
+3. Follow the instructions provided in the release
+
+## Itch.io
+
+https://jrco08.itch.io/nyarlas-birthday-bash
 
 ## How to Run Locally (Development)
 
