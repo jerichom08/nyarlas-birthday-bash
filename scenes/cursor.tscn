@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dkl65gnt61dmi" path="res://scenes/cursor.gd" id="1_s0nli"]
 [ext_resource type="Texture2D" uid="uid://12f4fkbiglob" path="res://assets/images/UI/UI Pack/Sprite sheets/Mouse sprites/Triangle Mouse icon 1.png" id="2_ndevg"]
 
-[node name="Cursor" type="Node2D" unique_id=36388210]
-z_index = 25
+[node name="Cursor" type="CanvasLayer" unique_id=340485408]
+layer = 100
 script = ExtResource("1_s0nli")
 
 [node name="CursorSprite" type="Sprite2D" parent="." unique_id=822283281]

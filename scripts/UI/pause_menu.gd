@@ -10,6 +10,7 @@ extends CanvasLayer
 func _ready():
 	visible = false
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	Cursor.process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	restart_button.process_mode = Node.PROCESS_MODE_ALWAYS
 	main_menu_button.process_mode = Node.PROCESS_MODE_ALWAYS
