@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cd4fn4n8fev4p" path="res://assets/images/bedroom/wall.png" id="11_kmic8"]
 [ext_resource type="Texture2D" uid="uid://b53btw62uvv6n" path="res://assets/images/bedroom/texture_0.png" id="12_24ygd"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="14_txmux"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="15_32syn"]
 [ext_resource type="Texture2D" uid="uid://c8sff4qwvpq6x" path="res://assets/images/bedroom/sparkles.png" id="15_mmggb"]
 [ext_resource type="PackedScene" uid="uid://dq6i2a1c6n38w" path="res://scenes/lvInterface/SceneTransition.tscn" id="16_hrr0t"]
 [ext_resource type="PackedScene" uid="uid://cqr3q5uem3bh" path="res://scenes/player/PlayerIntro.tscn" id="17_pek3y"]
@@ -307,6 +308,10 @@ sources/3 = SubResource("TileSetAtlasSource_ul5ke")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmggb"]
 size = Vector2(178, 179.5)
+
+[sub_resource type="FontVariation" id="FontVariation_ds2md"]
+fallbacks = Array[Font]([ExtResource("15_32syn")])
+base_font = ExtResource("14_txmux")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12sa1"]
 atlas = ExtResource("15_mmggb")
@@ -1000,7 +1005,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("14_txmux")
+theme_override_fonts/font = SubResource("FontVariation_ds2md")
 theme_override_font_sizes/font_size = 38
 text = "\"press E to interract\""
 

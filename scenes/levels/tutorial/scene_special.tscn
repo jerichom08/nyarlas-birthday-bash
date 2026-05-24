@@ -13,10 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bgs7wr7x2p2l0" path="res://assets/images/tilemaps/tilemap4_packed.png" id="8_p1ysx"]
 [ext_resource type="Texture2D" uid="uid://btsw1hlwcfrr7" path="res://assets/images/tilemaps/Tiles/img1.png" id="9_byuw4"]
 [ext_resource type="Texture2D" uid="uid://ongav7rshoun" path="res://assets/images/bedroom/hearts.png" id="10_f62vi"]
-[ext_resource type="FontFile" uid="uid://d022t1deah30r" path="res://assets/images/UI/text box/star-crush/Star Crush.otf" id="12_qig6g"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="13_51ajc"]
 [ext_resource type="Texture2D" uid="uid://bjot3cb5bu58g" path="res://assets/images/UI/text box/UI_grey_buttons_1.png" id="14_kmpop"]
 [ext_resource type="AudioStream" uid="uid://bmn1n3rrobhnv" path="res://assets/sounds temp/level sounds/click.mp3" id="15_yejoc"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="16_p8bpc"]
 [ext_resource type="Texture2D" uid="uid://8imq6jw4misy" path="res://assets/images/bedroom/scroll.png" id="17_yejoc"]
 [ext_resource type="Texture2D" uid="uid://bw30swm6qc8p8" path="res://assets/images/bedroom/ring.png" id="18_f62vi"]
 [ext_resource type="AudioStream" uid="uid://c4osu2q8t241p" path="res://assets/sounds temp/level sounds/getNewSpecialItem.wav" id="20_3qg2n"]
@@ -1719,6 +1719,14 @@ border_width_right = 6
 border_width_bottom = 6
 border_color = Color(0.3136, 0.35466662, 0.56, 1)
 
+[sub_resource type="FontVariation" id="FontVariation_5sdii"]
+fallbacks = Array[Font]([ExtResource("16_p8bpc")])
+base_font = ExtResource("13_51ajc")
+
+[sub_resource type="FontVariation" id="FontVariation_p8bpc"]
+fallbacks = Array[Font]([ExtResource("16_p8bpc")])
+base_font = ExtResource("13_51ajc")
+
 [sub_resource type="Theme" id="Theme_i04ma"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xq7nf"]
@@ -2261,7 +2269,7 @@ offset_left = 274.0
 offset_top = 36.0
 offset_right = 1124.0
 offset_bottom = 156.0
-theme_override_fonts/font = ExtResource("12_qig6g")
+theme_override_fonts/font = SubResource("FontVariation_5sdii")
 theme_override_font_sizes/font_size = 34
 autowrap_mode = 2
 
@@ -2282,7 +2290,7 @@ offset_left = 232.0
 offset_top = 62.0
 offset_right = 1167.0
 offset_bottom = 187.0
-theme_override_fonts/font = ExtResource("13_51ajc")
+theme_override_fonts/font = SubResource("FontVariation_p8bpc")
 theme_override_font_sizes/font_size = 30
 text = "fgdhjfjjgfhgjfjfjfjfj"
 autowrap_mode = 2

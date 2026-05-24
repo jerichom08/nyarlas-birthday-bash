@@ -1033,7 +1033,7 @@ theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.521568
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("12_l1mia")
 theme_override_font_sizes/font_size = 27
-text = "2.0 ) \"Some Platforms May Disappear\"
+text = "\"some platforms may disappear\"
 "
 
 [node name="basic tiles" type="TileMapLayer" parent="." unique_id=1624356173]
@@ -1096,7 +1096,7 @@ theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.521568
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("12_l1mia")
 theme_override_font_sizes/font_size = 27
-text = "2.5 ) \"And Some May Appear\"
+text = "\"and some may appear\"
 "
 script = ExtResource("5_wpupo")
 

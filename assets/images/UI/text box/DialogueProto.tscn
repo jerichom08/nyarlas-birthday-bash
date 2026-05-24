@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cwwf0vyidgraq" path="res://assets/images/UI/text box/dialogue_proto.gd" id="1_u6ovb"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="2_11dwa"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="3_78mon"]
 [ext_resource type="Texture2D" uid="uid://bjot3cb5bu58g" path="res://assets/images/UI/text box/UI_grey_buttons_1.png" id="3_yp4bp"]
 [ext_resource type="Texture2D" uid="uid://b4smr642vgqbq" path="res://assets/images/player/B_witch_idle.png" id="4_flyeq"]
 [ext_resource type="AudioStream" uid="uid://bmn1n3rrobhnv" path="res://assets/sounds temp/level sounds/click.mp3" id="5_6n3rb"]
+
+[sub_resource type="FontVariation" id="FontVariation_wwi7i"]
+fallbacks = Array[Font]([ExtResource("3_78mon")])
+base_font = ExtResource("2_11dwa")
 
 [sub_resource type="Theme" id="Theme_flyeq"]
 
@@ -78,7 +83,7 @@ offset_left = -481.0
 offset_top = 226.0
 offset_right = 454.0
 offset_bottom = 351.0
-theme_override_fonts/font = ExtResource("2_11dwa")
+theme_override_fonts/font = SubResource("FontVariation_wwi7i")
 theme_override_font_sizes/font_size = 45
 text = "But I seem to be missing some ingredients"
 autowrap_mode = 2
