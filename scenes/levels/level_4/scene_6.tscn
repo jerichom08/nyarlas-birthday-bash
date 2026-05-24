@@ -1092,6 +1092,7 @@ libraries/ = SubResource("AnimationLibrary_luh8w")
 
 [node name="boiling" type="AudioStreamPlayer2D" parent="." unique_id=1303017786]
 stream = ExtResource("25_5ktpk")
+bus = &"SFX"
 
 [node name="cake2" type="AnimatedSprite2D" parent="." unique_id=1437890074]
 position = Vector2(-449, 71)
@@ -1100,6 +1101,7 @@ sprite_frames = SubResource("SpriteFrames_2m4yt")
 
 [node name="success" type="AudioStreamPlayer2D" parent="." unique_id=726289112]
 stream = ExtResource("27_63kjs")
+bus = &"SFX"
 
 [node name="Joan" type="AnimatedSprite2D" parent="." unique_id=206007447]
 position = Vector2(217, -4)
@@ -1138,6 +1140,7 @@ scale = Vector2(4, 4)
 
 [node name="victory" type="AudioStreamPlayer2D" parent="." unique_id=1097682135]
 stream = ExtResource("27_32syn")
+bus = &"SFX"
 
 [connection signal="ready" from="cauldron_work" to="." method="_on_cauldron_ready"]
 [connection signal="body_entered" from="JoanArea2D" to="." method="_on_joan_body_entered"]

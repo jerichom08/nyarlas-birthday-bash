@@ -191,24 +191,6 @@ theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 75
 text = "Level Select"
 
-[node name="Quit" type="Button" parent="Button Manager" unique_id=1805338488]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -215.0
-offset_top = 410.0
-offset_right = 215.0
-offset_bottom = 506.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_8ln24")
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 75
-text = "Quit"
-
 [node name="SceneTransition" parent="." unique_id=99968887 instance=ExtResource("4_wu84c")]
 
 [node name="click" type="AudioStreamPlayer2D" parent="." unique_id=1814461550]
@@ -218,4 +200,3 @@ bus = &"SFX"
 [connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button Manager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button Manager/Level Select" to="." method="_on_level_select_pressed"]
-[connection signal="pressed" from="Button Manager/Quit" to="." method="_on_quit_pressed"]

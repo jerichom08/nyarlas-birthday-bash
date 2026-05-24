@@ -38,9 +38,3 @@ func _on_ready() -> void:
 	for child in get_children():
 		if child is AnimatedSprite2D:
 			child.play()
-
-
-func _on_quit_pressed() -> void:
-	$click.play()
-	await get_tree().create_timer(0.2).timeout
-	get_tree().quit()
