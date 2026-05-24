@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cwtwx8kf8338r"]
 
 [ext_resource type="Script" uid="uid://fkehvuvce6lj" path="res://scripts/UI/rpg_style_talk.gd" id="1_6shrq"]
-[ext_resource type="Texture2D" uid="uid://djt60ouuh61cu" path="res://scripts/UI/TurnipFace.png" id="2_on7qd"]
-[ext_resource type="FontFile" uid="uid://d022t1deah30r" path="res://assets/images/UI/text box/star-crush/Star Crush.otf" id="3_brviy"]
+[ext_resource type="Texture2D" uid="uid://csx60yopamsgf" path="res://scripts/UI/TurnipFace.png" id="2_on7qd"]
+[ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="3_on7qd"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="4_brviy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6shrq"]
 bg_color = Color(0.4977, 0.49990505, 0.63, 1)
@@ -20,6 +21,10 @@ border_width_right = 6
 border_width_bottom = 6
 border_color = Color(0.3136, 0.35466662, 0.56, 1)
 
+[sub_resource type="FontVariation" id="FontVariation_peyr4"]
+fallbacks = Array[Font]([ExtResource("4_brviy")])
+base_font = ExtResource("3_on7qd")
+
 [node name="RpgStyleTalk" type="CanvasLayer" unique_id=333744718]
 script = ExtResource("1_6shrq")
 
@@ -35,18 +40,10 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6shrq")
 
-[node name="FaceTexture" type="TextureRect" parent="Panel" unique_id=742695846]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = -95.0
-offset_right = 201.0
-offset_bottom = 107.0
-grow_vertical = 2
+[node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=260839798]
+position = Vector2(106.85002, 109.375)
+scale = Vector2(10.483336, 10.4833355)
 texture = ExtResource("2_on7qd")
-expand_mode = 1
-stretch_mode = 5
 
 [node name="Panel" type="Panel" parent="Panel" unique_id=909717853]
 layout_mode = 0
@@ -62,6 +59,6 @@ offset_left = 265.0
 offset_top = 47.0
 offset_right = 1115.0
 offset_bottom = 167.0
-theme_override_fonts/font = ExtResource("3_brviy")
+theme_override_fonts/font = SubResource("FontVariation_peyr4")
 theme_override_font_sizes/font_size = 34
 autowrap_mode = 2

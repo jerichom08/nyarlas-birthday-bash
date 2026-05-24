@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://coafju6wkmj0e" path="res://scenes/lvInterface/spikes.tscn" id="3_e8ji1"]
 [ext_resource type="Texture2D" uid="uid://bgs7wr7x2p2l0" path="res://assets/images/tilemaps/tilemap4_packed.png" id="3_xp1wc"]
 [ext_resource type="PackedScene" uid="uid://b2y5y1pl1m0sc" path="res://scenes/lvInterface/lava.tscn" id="4_aasmi"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="5_uxqix"]
 [ext_resource type="PackedScene" uid="uid://wrvyahwv456v" path="res://scenes/lvInterface/RegularPlatform.tscn" id="5_v3rwh"]
 [ext_resource type="PackedScene" uid="uid://c5viptoxpy5y4" path="res://scenes/Components/HeartPickup.tscn" id="6_xp1wc"]
 [ext_resource type="PackedScene" uid="uid://d4m0cam7e12l1" path="res://scenes/lvInterface/gate.tscn" id="7_va4an"]
@@ -75,6 +76,10 @@ texture = ExtResource("2_exam8")
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_exam8")
+
+[sub_resource type="FontVariation" id="FontVariation_cpv0e"]
+fallbacks = Array[Font]([ExtResource("5_uxqix")])
+base_font = ExtResource("10_uxqix")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udhpj"]
 texture = ExtResource("2_exam8")
@@ -573,7 +578,7 @@ theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.521568
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("10_uxqix")
 theme_override_font_sizes/font_size = 44
-text = "1.5 ) \"Watch Out For the Falling Spikes\""
+text = " \"watch out for the falling spikes\""
 
 [node name="ClueSign" parent="." unique_id=604565878 instance=ExtResource("16_eje0s")]
 position = Vector2(-463, 231)
@@ -587,9 +592,9 @@ offset_bottom = -43.0
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("10_uxqix")
+theme_override_fonts/font = SubResource("FontVariation_cpv0e")
 theme_override_font_sizes/font_size = 44
-text = "1.0 ) \"Press ↑ to Jump on Platforms\" 
+text = "\"press ↑ to jump on platforms\" 
 "
 
 [node name="sign2" parent="." unique_id=884197283 instance=ExtResource("16_eje0s")]

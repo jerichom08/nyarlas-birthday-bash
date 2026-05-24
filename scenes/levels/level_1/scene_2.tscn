@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dq6plgrbyepev" path="res://scenes/camera.tscn" id="9_6iv2x"]
 [ext_resource type="PackedScene" uid="uid://c1dqxq5otys68" path="res://scenes/lvInterface/JumpPad.tscn" id="10_arr50"]
 [ext_resource type="PackedScene" uid="uid://mq7xkryetq7u" path="res://scenes/Components/clue_sign.tscn" id="10_kx4rr"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="11_58eig"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="11_q1e3w"]
 [ext_resource type="PackedScene" uid="uid://1rawgbuqlynm" path="res://scenes/Components/Coin.tscn" id="15_3n03w"]
 [ext_resource type="PackedScene" uid="uid://c5viptoxpy5y4" path="res://scenes/Components/HeartPickup.tscn" id="16_rir53"]
@@ -806,13 +807,17 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_sagyo")
 sources/3 = SubResource("TileSetAtlasSource_utuh5")
 
-[sub_resource type="Resource" id="Resource_rir53"]
+[sub_resource type="FontVariation" id="FontVariation_xkhij"]
+fallbacks = Array[Font]([ExtResource("11_58eig")])
+base_font = ExtResource("11_q1e3w")
+
+[sub_resource type="Resource" id="Resource_x34mi"]
 resource_local_to_scene = true
 script = ExtResource("18_xkhij")
 gravity = 10.0
 metadata/_custom_type_script = "uid://cr8bvh7l7at2"
 
-[sub_resource type="Resource" id="Resource_58eig"]
+[sub_resource type="Resource" id="Resource_l4t7v"]
 resource_local_to_scene = true
 script = ExtResource("18_xkhij")
 gravity = 10.0
@@ -923,7 +928,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("11_q1e3w")
+theme_override_fonts/font = SubResource("FontVariation_xkhij")
 theme_override_font_sizes/font_size = 27
 text = "\" I show the truth while wearing lies,
 reveal your face but never your soul.
@@ -990,11 +995,11 @@ position = Vector2(-317, -165)
 
 [node name="spider" parent="." unique_id=264598264 instance=ExtResource("17_58eig")]
 position = Vector2(333, -29)
-stats = SubResource("Resource_rir53")
+stats = SubResource("Resource_x34mi")
 
 [node name="spider2" parent="." unique_id=1627200457 instance=ExtResource("17_58eig")]
 position = Vector2(-398, -30)
-stats = SubResource("Resource_58eig")
+stats = SubResource("Resource_l4t7v")
 
 [node name="Outofbound" parent="." unique_id=283698812 instance=ExtResource("18_rir53")]
 position = Vector2(-48, 259)

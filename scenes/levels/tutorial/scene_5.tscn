@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://coafju6wkmj0e" path="res://scenes/lvInterface/spikes.tscn" id="6_pbgsm"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="7_1nwqk"]
 [ext_resource type="Script" uid="uid://dfbpljufpmlsu" path="res://scenes/lvInterface/falling_spikes.gd" id="7_8k2iv"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="7_jbhe4"]
 [ext_resource type="PackedScene" uid="uid://b1cw5i2j56dsv" path="res://scenes/lvInterface/FallingSpikes.tscn" id="8_1nwqk"]
 [ext_resource type="PackedScene" uid="uid://cidv6r0dqw8o7" path="res://scenes/lvInterface/MovingPlatform.tscn" id="10_3wil1"]
 [ext_resource type="PackedScene" uid="uid://c1dqxq5otys68" path="res://scenes/lvInterface/JumpPad.tscn" id="10_yeoke"]
@@ -77,6 +78,10 @@ texture = ExtResource("1_a6gv3")
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gv3wu")
+
+[sub_resource type="FontVariation" id="FontVariation_vagim"]
+fallbacks = Array[Font]([ExtResource("7_jbhe4")])
+base_font = ExtResource("7_1nwqk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jbhe4"]
 texture = ExtResource("5_jvhar")
@@ -560,45 +565,27 @@ position = Vector2(-579.00006, -161.00002)
 scale = Vector2(3, 3)
 script = ExtResource("5_i74qv")
 
-[node name="Area2D2" parent="." unique_id=932735879 instance=ExtResource("14_1nwqk")]
-position = Vector2(490, -170)
-
-[node name="InteractionLabel" type="Label" parent="Area2D2" unique_id=1303170523]
-offset_left = -131.0
-offset_top = -63.0
-offset_right = 411.0
-offset_bottom = 44.0
-theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
-theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("7_1nwqk")
-theme_override_font_sizes/font_size = 25
-text = "  3.0 ) \"Holding [ W ] or 
-( ↑ ) lets you jump higher\"
-"
-metadata/_edit_use_anchors_ = true
-
 [node name="Area2D" parent="." unique_id=604565878 instance=ExtResource("14_1nwqk")]
 position = Vector2(-373, 208)
 
-[node name="InteractionLabel" type="Label" parent="Area2D" unique_id=818326447]
-offset_left = -217.0
-offset_top = -120.0
-offset_right = 325.0
-offset_bottom = -53.0
+[node name="InteractionLabel" type="Label" parent="Area2D" unique_id=1303170523]
+offset_left = -233.0
+offset_top = -56.0
+offset_right = 309.0
+offset_bottom = 51.0
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("7_1nwqk")
-theme_override_font_sizes/font_size = 27
-text = "3.5 ) \"The Jump Boost Can Be Pretty Fun..\"
+theme_override_fonts/font = SubResource("FontVariation_vagim")
+theme_override_font_sizes/font_size = 25
+text = "\"holding w or ↑ lets you jump higher\"
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="basic tiles" type="TileMapLayer" parent="." unique_id=1624356173]
 position = Vector2(804.00006, 1)
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AADl/wUAAAACAAMAAADm/wUAAgACAAEAAADn/wUAAgACAAEAAADo/wUAAgACAAEAAADp/wUAAAACAAMAAADq/wUAAAACAAMAAADr/wUAAAACAAMAAADs/wUAAAACAAMAAADt/wUAAAACAAMAAADu/wUAAAACAAMAAADv/wUAAAACAAMAAADw/wUAAAACAAMAAADx/wUAAAACAAMAAADy/wUAAAACAAMAAADz/wUAAAACAAMAAAD0/wUAAAACAAMAAAD1/wUAAAACAAMAAAD2/wUAAAACAAMAAAD3/wUAAAACAAMAAAD4/wUAAgACAAYAAAD5/wUAAgACAAYAAAD6/wUAAgACAAYAAAD7/wUAAgACAAYAAAD8/wUAAgACAAYAAADl/wYAAgACAAYAAADm/wYAAgACAAYAAADn/wYAAgAEAAUAAADo/wYAAgACAAYAAADp/wYAAgACAAYAAADq/wYAAgACAAYAAADr/wYAAgACAAYAAADs/wYAAgACAAYAAADt/wYAAgAEAAUAAADu/wYAAgACAAYAAADv/wYAAgACAAYAAADw/wYAAgACAAYAAADx/wYAAgACAAYAAADy/wYAAgACAAYAAADz/wYAAgACAAYAAAD0/wYAAgACAAYAAAD1/wYAAgAEAAUAAAD2/wYAAgACAAYAAAD3/wYAAgACAAYAAAD4/wYAAgACAAYAAAD5/wYAAgACAAYAAAD6/wYAAgACAAYAAAD7/wYAAgACAAYAAAD8/wYAAgACAAYAAAD8////AAACAAMAAAD7////AAACAAMAAAD9////AgADAAAAAAD8/wAAAgACAAYAAAD8/wEAAgAEAAUAAAD8/wIAAgACAAYAAAD8/wMAAgACAAYAAAD8/wQAAgACAAYAAAD7/wAAAgABAAYAAAD7/wEAAgABAAYAAAD7/wIAAgACAAYAAAD7/wMAAgAFAAAAAAD7/wQAAgAEAAUAAAD9//7/AgABAAEAAAD9//3/AgABAAEAAAD9//z/AgABAAEAAAD9//v/AgABAAEAAAD9//r/AgABAAEAAAD9//n/AgABAAEAAAD6////AgACAAcAAAD5////AAACAAIAAAD4////AgACAAcAAAD3////AAACAAIAAAD1////AAACAAIAAADz////AAACAAIAAADy////AAACAAIAAADx////AgACAAcAAADw////AAACAAIAAADv////AgACAAcAAADu////AAACAAIAAADt////AgACAAcAAADs////AAACAAIAAADr////AgACAAcAAADq////AAACAAIAAADp////AAABAAIAAAD6//7/AAAAAAMAAAD8//n/AgACAAcAAAD7//n/AgACAAcAAAD6//n/AgACAAYAAAD5//n/AgACAAcAAAD4//n/AgACAAcAAAD3//n/AgACAAcAAAD1//n/AgACAAcAAAD0//n/AgACAAcAAADz//n/AgACAAcAAADq//n/AgACAAcAAADp//n/AgACAAcAAADo//n/AgACAAcAAADn//n/AgACAAcAAADl//n/AgACAAYAAAD4//7/AgAAAAYAAADr//n/AgACAAYAAADs//n/AgACAAcAAADt//n/AgACAAYAAADu//n/AgACAAcAAADv//n/AgACAAYAAADw//n/AgACAAcAAADx//n/AgACAAYAAADy//n/AgACAAcAAAD0//7/AgAAAAYAAAD0////AgACAAcAAAD2//7/AAAAAAMAAAD2////AgACAAcAAAD4//3/AAAAAAMAAAD0//3/AAAAAAMAAAD6//r/AgAAAAcAAADm//n/AgACAAYAAADr//7/AAAAAAMAAADv//7/AAAAAAMAAADx//3/AAAAAAMAAADx//7/AgAAAAYAAADt//3/AAAAAAMAAADt//7/AgAAAAYAAADr//r/AgAAAAcAAADx//r/AgAAAAcAAAD2//n/AgACAAYAAAD2//r/AgAAAAcAAADt//r/AgAAAAcAAADv//r/AgAAAAcAAAD4/wIAAAABAAMAAAD4/wMAAgABAAYAAAD4/wQAAgABAAYAAADk//3/AgABAAAAAADl//3/AgACAAAAAADm//3/AgADAAAAAAD6/wMAAgAEAAAAAAD6/wQAAgACAAYAAAD5/wIAAAACAAMAAAD6/wIAAAACAAMAAAD5/wQAAgACAAYAAAD5/wMAAgACAAYAAADl//z/AgAEAAcAAAD6/wEAAgAEAAcAAADz/wQAAgAFAAYAAAD8//7/AgAEAAYAAADz/wIAAgATAAYAAADy//7/AgAJAAYAAADm//r/AgADAAcAAADl//r/AgACAAcAAADk//n/AgACAAYAAADk//r/AgACAAcAAADk/wUAAAACAAMAAADk/wYAAgACAAYAAADj//3/AgABAAYAAADj//7/AgABAAYAAADj////AgABAAYAAADj/wAAAgABAAYAAADj/wEAAgABAAYAAADj/wIAAgABAAYAAADj/wMAAgABAAYAAADj/wQAAgABAAYAAADj/wUAAgABAAYAAADj/wYAAgABAAYAAADm//z/AgAHAAQAAADn//r/AAAQAAAAAADp//r/AAAQAAAAAAD6//3/AAAGAAQAAADq/wQAAAAGAAQAAAA=")
+tile_map_data = PackedByteArray("AADl/wUAAAACAAMAAADm/wUAAgACAAEAAADn/wUAAgACAAEAAADo/wUAAgACAAEAAADp/wUAAAACAAMAAADq/wUAAAACAAMAAADr/wUAAAACAAMAAADs/wUAAAACAAMAAADt/wUAAAACAAMAAADu/wUAAAACAAMAAADv/wUAAAACAAMAAADw/wUAAAACAAMAAADx/wUAAAACAAMAAADy/wUAAAACAAMAAADz/wUAAAACAAMAAAD0/wUAAAACAAMAAAD1/wUAAAACAAMAAAD2/wUAAAACAAMAAAD3/wUAAAACAAMAAAD4/wUAAgACAAYAAAD5/wUAAgACAAYAAAD6/wUAAgACAAYAAAD7/wUAAgACAAYAAAD8/wUAAgACAAYAAADl/wYAAgACAAYAAADm/wYAAgACAAYAAADn/wYAAgAEAAUAAADo/wYAAgACAAYAAADp/wYAAgACAAYAAADq/wYAAgACAAYAAADr/wYAAgACAAYAAADs/wYAAgACAAYAAADt/wYAAgAEAAUAAADu/wYAAgACAAYAAADv/wYAAgACAAYAAADw/wYAAgACAAYAAADx/wYAAgACAAYAAADy/wYAAgACAAYAAADz/wYAAgACAAYAAAD0/wYAAgACAAYAAAD1/wYAAgAEAAUAAAD2/wYAAgACAAYAAAD3/wYAAgACAAYAAAD4/wYAAgACAAYAAAD5/wYAAgACAAYAAAD6/wYAAgACAAYAAAD7/wYAAgACAAYAAAD8/wYAAgACAAYAAAD8////AAACAAMAAAD7////AAACAAMAAAD9////AgADAAAAAAD8/wAAAgACAAYAAAD8/wEAAgAEAAUAAAD8/wIAAgACAAYAAAD8/wMAAgACAAYAAAD8/wQAAgACAAYAAAD7/wAAAgABAAYAAAD7/wEAAgABAAYAAAD7/wIAAgACAAYAAAD7/wMAAgAFAAAAAAD7/wQAAgAEAAUAAAD9//7/AgABAAEAAAD9//3/AgABAAEAAAD9//z/AgABAAEAAAD9//v/AgABAAEAAAD9//r/AgABAAEAAAD9//n/AgABAAEAAAD6////AgACAAcAAAD5////AAACAAIAAAD4////AgACAAcAAAD3////AAACAAIAAAD1////AAACAAIAAADz////AAACAAIAAADy////AAACAAIAAADx////AgACAAcAAADw////AAACAAIAAADv////AgACAAcAAADu////AAACAAIAAADt////AgACAAcAAADs////AAACAAIAAADr////AgACAAcAAADq////AAACAAIAAADp////AAABAAIAAAD6//7/AAAAAAMAAAD8//n/AgACAAcAAAD7//n/AgACAAcAAAD6//n/AgACAAYAAAD5//n/AgACAAcAAAD4//n/AgACAAcAAAD3//n/AgACAAcAAAD1//n/AgACAAcAAAD0//n/AgACAAcAAADz//n/AgACAAcAAADq//n/AgACAAcAAADp//n/AgACAAcAAADo//n/AgACAAcAAADn//n/AgACAAcAAADl//n/AgACAAYAAAD4//7/AgAAAAYAAADr//n/AgACAAYAAADs//n/AgACAAcAAADt//n/AgACAAYAAADu//n/AgACAAcAAADv//n/AgACAAYAAADw//n/AgACAAcAAADx//n/AgACAAYAAADy//n/AgACAAcAAAD0//7/AgAAAAYAAAD0////AgACAAcAAAD2//7/AAAAAAMAAAD2////AgACAAcAAAD4//3/AAAAAAMAAAD0//3/AAAAAAMAAAD6//r/AgAAAAcAAADm//n/AgACAAYAAADr//7/AAAAAAMAAADv//7/AAAAAAMAAADx//3/AAAAAAMAAADx//7/AgAAAAYAAADt//3/AAAAAAMAAADt//7/AgAAAAYAAADr//r/AgAAAAcAAADx//r/AgAAAAcAAAD2//n/AgACAAYAAAD2//r/AgAAAAcAAADt//r/AgAAAAcAAADv//r/AgAAAAcAAAD4/wIAAAABAAMAAAD4/wMAAgABAAYAAAD4/wQAAgABAAYAAADk//3/AgABAAAAAADl//3/AgACAAAAAADm//3/AgADAAAAAAD6/wMAAgAEAAAAAAD6/wQAAgACAAYAAAD5/wIAAAACAAMAAAD6/wIAAAACAAMAAAD5/wQAAgACAAYAAAD5/wMAAgACAAYAAADl//z/AgAEAAcAAAD6/wEAAgAEAAcAAADz/wQAAgAFAAYAAAD8//7/AgAEAAYAAADz/wIAAgATAAYAAADy//7/AgAJAAYAAADm//r/AgADAAcAAADl//r/AgACAAcAAADk//n/AgACAAYAAADk//r/AgACAAcAAADk/wUAAAACAAMAAADk/wYAAgACAAYAAADj//3/AgABAAYAAADj//7/AgABAAYAAADj////AgABAAYAAADj/wAAAgABAAYAAADj/wEAAgABAAYAAADj/wIAAgABAAYAAADj/wMAAgABAAYAAADj/wQAAgABAAYAAADj/wUAAgABAAYAAADj/wYAAgABAAYAAADm//z/AgAHAAQAAADn//r/AAAQAAAAAADp//r/AAAQAAAAAADq/wQAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_alrbv")
 
 [node name="Spikes" parent="." unique_id=529623262 instance=ExtResource("6_pbgsm")]

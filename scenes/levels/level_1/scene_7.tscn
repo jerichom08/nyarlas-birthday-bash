@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://pg6ytaryk6y" path="res://scenes/player/player.tscn" id="8_1ydgn"]
 [ext_resource type="PackedScene" uid="uid://dad8n45up7s3i" path="res://scenes/Components/TeleportDoor.tscn" id="9_6w5mp"]
 [ext_resource type="Script" uid="uid://dvhen6fj86rgw" path="res://scenes/Components/teleportDoor.gd" id="10_6wih5"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="11_c1cfn"]
 [ext_resource type="PackedScene" uid="uid://dq6plgrbyepev" path="res://scenes/camera.tscn" id="11_fhh7k"]
 [ext_resource type="PackedScene" uid="uid://b1cw5i2j56dsv" path="res://scenes/lvInterface/FallingSpikes.tscn" id="12_qglet"]
 [ext_resource type="PackedScene" uid="uid://cidv6r0dqw8o7" path="res://scenes/lvInterface/MovingPlatform.tscn" id="13_1sttk"]
@@ -578,25 +579,29 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_avmw6")
 sources/3 = SubResource("TileSetAtlasSource_2tk6r")
 
-[sub_resource type="Resource" id="Resource_wfvsy"]
-resource_local_to_scene = true
-script = ExtResource("20_wfvsy")
-gravity = 10.0
-metadata/_custom_type_script = "uid://cr8bvh7l7at2"
-
-[sub_resource type="Resource" id="Resource_c1cfn"]
-resource_local_to_scene = true
-script = ExtResource("20_wfvsy")
-gravity = 10.0
-metadata/_custom_type_script = "uid://cr8bvh7l7at2"
-
-[sub_resource type="Resource" id="Resource_tlx3o"]
-resource_local_to_scene = true
-script = ExtResource("20_wfvsy")
-gravity = 10.0
-metadata/_custom_type_script = "uid://cr8bvh7l7at2"
+[sub_resource type="FontVariation" id="FontVariation_tlx3o"]
+fallbacks = Array[Font]([ExtResource("11_c1cfn")])
+base_font = ExtResource("7_difsh")
 
 [sub_resource type="Resource" id="Resource_jirmk"]
+resource_local_to_scene = true
+script = ExtResource("20_wfvsy")
+gravity = 10.0
+metadata/_custom_type_script = "uid://cr8bvh7l7at2"
+
+[sub_resource type="Resource" id="Resource_l6ri2"]
+resource_local_to_scene = true
+script = ExtResource("20_wfvsy")
+gravity = 10.0
+metadata/_custom_type_script = "uid://cr8bvh7l7at2"
+
+[sub_resource type="Resource" id="Resource_267sv"]
+resource_local_to_scene = true
+script = ExtResource("20_wfvsy")
+gravity = 10.0
+metadata/_custom_type_script = "uid://cr8bvh7l7at2"
+
+[sub_resource type="Resource" id="Resource_hrpt1"]
 resource_local_to_scene = true
 script = ExtResource("20_wfvsy")
 gravity = 10.0
@@ -666,7 +671,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("7_difsh")
+theme_override_fonts/font = SubResource("FontVariation_tlx3o")
 theme_override_font_sizes/font_size = 27
 text = "\"ever done a trust fall? \""
 
@@ -729,19 +734,19 @@ coin_id = "lv1_s7_1"
 
 [node name="spider" parent="." unique_id=264598264 instance=ExtResource("19_5l707")]
 position = Vector2(-280, -183)
-stats = SubResource("Resource_wfvsy")
+stats = SubResource("Resource_jirmk")
 
 [node name="spider3" parent="." unique_id=420706573 instance=ExtResource("19_5l707")]
 position = Vector2(-70, -17)
-stats = SubResource("Resource_c1cfn")
+stats = SubResource("Resource_l6ri2")
 
 [node name="spider4" parent="." unique_id=1760497611 instance=ExtResource("19_5l707")]
 position = Vector2(458, -34)
-stats = SubResource("Resource_tlx3o")
+stats = SubResource("Resource_267sv")
 
 [node name="spider2" parent="." unique_id=510250024 instance=ExtResource("19_5l707")]
 position = Vector2(-308, 80)
-stats = SubResource("Resource_jirmk")
+stats = SubResource("Resource_hrpt1")
 
 [node name="HeartPickup" parent="." unique_id=526582475 instance=ExtResource("21_wfvsy")]
 position = Vector2(366, -282)

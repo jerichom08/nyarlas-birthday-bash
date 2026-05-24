@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cyc0q6e6r8s8h" path="res://assets/images/UI/BG.png" id="1_egmj1"]
 [ext_resource type="Script" uid="uid://ckoelrr2be0gm" path="res://scripts/lvls/level_select.gd" id="1_ibarm"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="2_6y6kj"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="4_0t37j"]
 [ext_resource type="PackedScene" uid="uid://dq6i2a1c6n38w" path="res://scenes/lvInterface/SceneTransition.tscn" id="4_fmuyb"]
 [ext_resource type="Texture2D" uid="uid://chg8pvq011ugw" path="res://assets/images/enemies/mobs/bat/bat_idle_spritesheet.png" id="5_fmuyb"]
 [ext_resource type="Texture2D" uid="uid://b5tt8da50bu4q" path="res://assets/images/enemies/mobs/rat/idling.png" id="6_3p8qn"]
@@ -44,6 +45,22 @@ corner_radius_bottom_left = 25
 Button/styles/hover = SubResource("StyleBoxFlat_t7n47")
 Button/styles/normal = SubResource("StyleBoxFlat_0t37j")
 Button/styles/pressed = SubResource("StyleBoxFlat_33358")
+
+[sub_resource type="FontVariation" id="FontVariation_33358"]
+fallbacks = Array[Font]([ExtResource("4_0t37j")])
+base_font = ExtResource("2_6y6kj")
+
+[sub_resource type="FontVariation" id="FontVariation_0t37j"]
+fallbacks = Array[Font]([ExtResource("4_0t37j")])
+base_font = ExtResource("2_6y6kj")
+
+[sub_resource type="FontVariation" id="FontVariation_chx4x"]
+fallbacks = Array[Font]([ExtResource("4_0t37j")])
+base_font = ExtResource("2_6y6kj")
+
+[sub_resource type="FontVariation" id="FontVariation_ptr58"]
+fallbacks = Array[Font]([ExtResource("4_0t37j")])
+base_font = ExtResource("2_6y6kj")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxdfm"]
 atlas = ExtResource("5_fmuyb")
@@ -236,7 +253,7 @@ offset_bottom = 222.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_egmj1")
-theme_override_fonts/font = ExtResource("2_6y6kj")
+theme_override_fonts/font = SubResource("FontVariation_33358")
 theme_override_font_sizes/font_size = 75
 text = "level. 1"
 
@@ -254,7 +271,7 @@ offset_bottom = 222.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_egmj1")
-theme_override_fonts/font = ExtResource("2_6y6kj")
+theme_override_fonts/font = SubResource("FontVariation_0t37j")
 theme_override_font_sizes/font_size = 75
 text = "level. 2"
 
@@ -272,7 +289,7 @@ offset_bottom = 371.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_egmj1")
-theme_override_fonts/font = ExtResource("2_6y6kj")
+theme_override_fonts/font = SubResource("FontVariation_chx4x")
 theme_override_font_sizes/font_size = 75
 text = "level. 3"
 
@@ -290,7 +307,7 @@ offset_bottom = 371.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_egmj1")
-theme_override_fonts/font = ExtResource("2_6y6kj")
+theme_override_fonts/font = SubResource("FontVariation_ptr58")
 theme_override_font_sizes/font_size = 75
 text = "level. 4"
 

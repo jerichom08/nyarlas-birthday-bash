@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b3tiwnxtbfvlh" path="res://scenes/lvInterface/TwoWayPlatformS.tscn" id="15_l18n5"]
 [ext_resource type="PackedScene" uid="uid://mq7xkryetq7u" path="res://scenes/Components/clue_sign.tscn" id="16_l18n5"]
 [ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="17_jyyfh"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="17_vngnc"]
 [ext_resource type="PackedScene" uid="uid://d4m0cam7e12l1" path="res://scenes/lvInterface/gate.tscn" id="18_h38k0"]
 [ext_resource type="Script" uid="uid://cnjxhdq35qg0m" path="res://scenes/lvInterface/gate.gd" id="19_s2hta"]
 
@@ -803,6 +804,10 @@ sources/2 = SubResource("TileSetAtlasSource_avmw6")
 sources/0 = SubResource("TileSetAtlasSource_imlax")
 sources/1 = SubResource("TileSetAtlasSource_gmqph")
 
+[sub_resource type="FontVariation" id="FontVariation_d7qqi"]
+fallbacks = Array[Font]([ExtResource("17_vngnc")])
+base_font = ExtResource("17_jyyfh")
+
 [node name="Node2D" type="Node2D" unique_id=188122060]
 position = Vector2(793, 343)
 
@@ -893,7 +898,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("17_jyyfh")
+theme_override_fonts/font = SubResource("FontVariation_d7qqi")
 theme_override_font_sizes/font_size = 20
 text = "\"you can press ↓ or s to go
 down some platforms now\""

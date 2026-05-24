@@ -124,7 +124,7 @@ theme_override_colors/font_outline_color = Color(0.12941177, 0.101960786, 0.1882
 theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("3_ya8vd")
 theme_override_font_sizes/font_size = 100
-text = "Fin."
+text = "Fin"
 horizontal_alignment = 1
 
 [node name="Button Manager" type="Control" parent="." unique_id=1313472479]

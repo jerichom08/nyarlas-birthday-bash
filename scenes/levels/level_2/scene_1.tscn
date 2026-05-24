@@ -19,7 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://bevijo67l4rn0" path="res://scenes/lvInterface/MovingPlatformH.tscn" id="14_m3ou3"]
 [ext_resource type="PackedScene" uid="uid://1rawgbuqlynm" path="res://scenes/Components/Coin.tscn" id="15_n8pg6"]
 [ext_resource type="PackedScene" uid="uid://dlckg22mobjbq" path="res://scenes/mobs/turnipNPC.tscn" id="17_imlax"]
-[ext_resource type="Texture2D" uid="uid://csx60yopamsgf" path="res://scripts/UI/turnipFace.png" id="18_kt1ph"]
+[ext_resource type="Texture2D" uid="uid://csx60yopamsgf" path="res://scripts/UI/TurnipFace.png" id="18_kt1ph"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="21_w56qp"]
 [ext_resource type="PackedScene" uid="uid://bwilndgwo5sff" path="res://scenes/puzzles/puzzle_5/TestItem.tscn" id="23_4onw6"]
 [ext_resource type="Texture2D" uid="uid://bm064av7x8nut" path="res://assets/images/food/cookie_1.png" id="24_uf1yc"]
 [ext_resource type="Texture2D" uid="uid://dhxp54k607lk3" path="res://assets/images/food/cookie_15.png" id="25_j7pju"]
@@ -30,7 +31,6 @@
 [ext_resource type="AudioStream" uid="uid://e5xbfukr8s28" path="res://assets/sounds temp/status sounds/Retro PowerUP StereoUP 05.wav" id="27_uougs"]
 [ext_resource type="PackedScene" uid="uid://c5viptoxpy5y4" path="res://scenes/Components/HeartPickup.tscn" id="29_kt1ph"]
 [ext_resource type="PackedScene" uid="uid://cwtwx8kf8338r" path="res://scripts/UI/rpg_style_talk.tscn" id="30_0ijtv"]
-[ext_resource type="PackedScene" uid="uid://bxcsrmuququwo" path="res://scripts/UI/Inventory.tscn" id="32_86w07"]
 [ext_resource type="PackedScene" uid="uid://d20e0iuxw8g78" path="res://scenes/enemies/mobs/skeleton/skeleton.tscn" id="32_w56qp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfkud"]
@@ -1029,6 +1029,10 @@ physics_layer_0/collision_mask = 0
 sources/2 = SubResource("TileSetAtlasSource_gaq46")
 sources/3 = SubResource("TileSetAtlasSource_m3ou3")
 
+[sub_resource type="FontVariation" id="FontVariation_4p11s"]
+fallbacks = Array[Font]([ExtResource("21_w56qp")])
+base_font = ExtResource("9_yg775")
+
 [node name="Node2D" type="Node2D" unique_id=188122060]
 position = Vector2(793, 343)
 script = ExtResource("1_1rjxj")
@@ -1141,7 +1145,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("9_yg775")
+theme_override_fonts/font = SubResource("FontVariation_4p11s")
 theme_override_font_sizes/font_size = 27
 text = "\" Pay the Sproutling’s little tax,
 Then you’re free to leave at last. \""
@@ -1209,8 +1213,6 @@ region_rect = Rect2(24, 136, 112, 112)
 position = Vector2(447, -156)
 
 [node name="RpgStyleTalk" parent="." unique_id=333744718 instance=ExtResource("30_0ijtv")]
-
-[node name="Inventory_tscn" parent="." unique_id=2087940317 instance=ExtResource("32_86w07")]
 
 [node name="Skeleton" parent="." unique_id=712153249 instance=ExtResource("32_w56qp")]
 position = Vector2(487, 225.99997)

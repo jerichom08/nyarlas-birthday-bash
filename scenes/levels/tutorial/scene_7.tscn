@@ -14,8 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dq6plgrbyepev" path="res://scenes/camera.tscn" id="13_7mqk0"]
 [ext_resource type="PackedScene" uid="uid://c1dqxq5otys68" path="res://scenes/lvInterface/JumpPad.tscn" id="13_jlbhy"]
 [ext_resource type="PackedScene" uid="uid://dq6i2a1c6n38w" path="res://scenes/lvInterface/SceneTransition.tscn" id="14_08fn7"]
-[ext_resource type="PackedScene" uid="uid://mq7xkryetq7u" path="res://scenes/Components/clue_sign.tscn" id="14_qyiaw"]
-[ext_resource type="FontFile" uid="uid://bue3jssuqmyou" path="res://assets/images/UI/text box/star-crush/Star Crush.ttf" id="15_08fn7"]
 [ext_resource type="PackedScene" uid="uid://1rawgbuqlynm" path="res://scenes/Components/Coin.tscn" id="16_08fn7"]
 [ext_resource type="PackedScene" uid="uid://bgnvfv570pkfx" path="res://scenes/lvInterface/outofbound.tscn" id="18_516r2"]
 
@@ -615,22 +613,6 @@ position = Vector2(-509.00003, -188)
 position = Vector2(98, -6)
 
 [node name="SceneTransition" parent="." unique_id=99968887 instance=ExtResource("14_08fn7")]
-
-[node name="sign2" parent="." unique_id=1493722316 instance=ExtResource("14_qyiaw")]
-position = Vector2(505, -222)
-
-[node name="InteractionLabel" type="Label" parent="sign2" unique_id=812339522]
-offset_left = -310.0
-offset_top = 23.0
-offset_right = 139.0
-offset_bottom = 86.0
-theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
-theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("15_08fn7")
-theme_override_font_sizes/font_size = 27
-text = "\"Falling platfroms below!\""
-metadata/_edit_use_anchors_ = true
 
 [node name="Coin" parent="." unique_id=1608490570 instance=ExtResource("16_08fn7")]
 position = Vector2(12.9999695, -246.00002)

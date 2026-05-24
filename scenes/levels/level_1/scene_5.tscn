@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b3vnwgub2ibnm" path="res://scenes/levels/level_1/NextScene1.tscn" id="3_swsw1"]
 [ext_resource type="PackedScene" uid="uid://coafju6wkmj0e" path="res://scenes/lvInterface/spikes.tscn" id="6_6taol"]
 [ext_resource type="PackedScene" uid="uid://ckguwt8uap5es" path="res://scenes/lvInterface/DisappearingPlatform.tscn" id="7_hgw45"]
+[ext_resource type="FontFile" uid="uid://dvws7p8s03jvf" path="res://assets/images/UI/text box/star-crush/times.ttf" id="7_vando"]
 [ext_resource type="PackedScene" uid="uid://b1cw5i2j56dsv" path="res://scenes/lvInterface/FallingSpikes.tscn" id="7_wagfe"]
 [ext_resource type="PackedScene" uid="uid://b2y5y1pl1m0sc" path="res://scenes/lvInterface/lava.tscn" id="11_5ni64"]
 [ext_resource type="PackedScene" uid="uid://pg6ytaryk6y" path="res://scenes/player/player.tscn" id="13_fjqn5"]
@@ -756,13 +757,17 @@ sources/2 = SubResource("TileSetAtlasSource_sagyo")
 sources/3 = SubResource("TileSetAtlasSource_utuh5")
 sources/0 = SubResource("TileSetAtlasSource_t0qep")
 
-[sub_resource type="Resource" id="Resource_40ace"]
+[sub_resource type="FontVariation" id="FontVariation_j3eqt"]
+fallbacks = Array[Font]([ExtResource("7_vando")])
+base_font = ExtResource("14_djex2")
+
+[sub_resource type="Resource" id="Resource_sdbpq"]
 resource_local_to_scene = true
 script = ExtResource("16_40ace")
 gravity = 10.0
 metadata/_custom_type_script = "uid://cr8bvh7l7at2"
 
-[sub_resource type="Resource" id="Resource_vando"]
+[sub_resource type="Resource" id="Resource_7pjcs"]
 resource_local_to_scene = true
 script = ExtResource("16_40ace")
 gravity = 10.0
@@ -801,7 +806,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_shadow_color = Color(0, 0, 1, 0)
 theme_override_colors/font_outline_color = Color(0.16078432, 0.3137255, 0.52156866, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("14_djex2")
+theme_override_fonts/font = SubResource("FontVariation_j3eqt")
 theme_override_font_sizes/font_size = 27
 text = "\" I vanish at dawn, but guide 
   you at night. What am I?\""
@@ -932,11 +937,11 @@ coin_id = "lv1_s5_2"
 
 [node name="spider" parent="." unique_id=264598264 instance=ExtResource("15_pfl32")]
 position = Vector2(439, 241)
-stats = SubResource("Resource_40ace")
+stats = SubResource("Resource_sdbpq")
 
 [node name="spider2" parent="." unique_id=355961562 instance=ExtResource("15_pfl32")]
 position = Vector2(-293, 317)
-stats = SubResource("Resource_vando")
+stats = SubResource("Resource_7pjcs")
 
 [node name="Outofbound" parent="." unique_id=283698812 instance=ExtResource("17_40ace")]
 position = Vector2(66, 360)
